@@ -686,6 +686,34 @@ a{ color:inherit; }
 }
 @media print{ .flota{ display:none !important; } }
 
+/* — Aviso de dirección copiada. Aparece al pulsar cualquier enlace de
+     correo: un mailto solo funciona si el visitante tiene un gestor
+     configurado, y quien usa webmail no lo tiene. Copiando además la
+     dirección, nadie se queda sin poder escribir. — */
+.copiado{
+  position:fixed; left:50%; bottom:clamp(.9rem,3vw,1.6rem); z-index:95;
+  transform:translate(-50%,14px);
+  max-width:min(30rem, calc(100vw - 2rem));
+  padding:.8rem 1.15rem;
+  border:1px solid var(--line-2); border-radius:var(--r);
+  background-color:var(--surface-2); color:var(--ink);
+  font-size:var(--t-sm); font-weight:500; line-height:1.4;
+  text-align:center; word-break:break-word;
+  box-shadow:0 14px 36px -10px rgba(0,0,0,.6);
+  opacity:0; pointer-events:none;
+  transition:opacity .22s ease, transform .22s ease;
+}
+.copiado--visible{ opacity:1; transform:translate(-50%,0); }
+/* En pantallas pequeñas el botón flotante ocupa la esquina inferior:
+   el aviso sube para no taparlo. */
+@media (max-width:560px){
+  .copiado{ bottom:4.8rem; }
+}
+@media (prefers-reduced-motion:reduce){
+  .copiado{ transition:opacity .01ms; transform:translate(-50%,0); }
+}
+@media print{ .copiado{ display:none !important; } }
+
 /* ═══════════════════════════════════════════════════════════════════════
    CAPA DIGITAL · red animada, palabras clave e iconografía
    ═══════════════════════════════════════════════════════════════════════ */
