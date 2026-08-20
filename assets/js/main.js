@@ -635,3 +635,75 @@
     });
   }
 })();
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   CORREO · copiar la dirección al portapapeles
+   ═══════════════════════════════════════════════════════════════════════
+   Un enlace mailto depende de que el visitante tenga un gestor de correo
+   configurado en su equipo. Mucha gente usa Gmail o Outlook por web y no
+   lo tiene: al pulsar no ocurre nada, o le aparece un cuadro del sistema
+   que no sabe resolver. Copiando además la dirección, quien no consiga
+   abrir el correo la tiene lista para pegarla donde quiera.
+
+   No se cancela la navegación: el gestor de correo se sigue abriendo
+   para quien sí lo tenga.
+   ═══════════════════════════════════════════════════════════════════════ */
+(function () {
+  var enlaces = document.querySelectorAll('[data-copiar]');
+  if (!enlaces.length) return;
+
+  var aviso = null;
+  var reloj = null;
+
+  function muestra(texto) {
+    if (!aviso) {
+      aviso = document.createElement('div');
+      aviso.className = 'copiado';
+      aviso.setAttribute('role', 'status');
+      document.body.appendChild(aviso);
+    }
+    aviso.textContent = texto;
+    /* Reflujo forzado: sin esto la transición no se repite cuando el
+       aviso ya estaba en pantalla de una pulsación anterior. */
+    void aviso.offsetWidth;
+    aviso.classList.add('copiado--visible');
+
+    clearTimeout(reloj);
+    reloj = setTimeout(function () {
+      aviso.classList.remove('copiado--visible');
+    }, 3400);
+  }
+
+  function copia(texto) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(texto);
+    }
+    /* Reserva para navegadores antiguos y para pruebas en local, donde
+       el portapapeles moderno no está disponible. */
+    return new Promise(function (cumple, falla) {
+      var caja = document.createElement('textarea');
+      caja.value = texto;
+      caja.setAttribute('readonly', '');
+      caja.style.position = 'fixed';
+      caja.style.top = '-1000px';
+      caja.style.opacity = '0';
+      document.body.appendChild(caja);
+      caja.select();
+      var bien = false;
+      try { bien = document.execCommand('copy'); } catch (e) { bien = false; }
+      document.body.removeChild(caja);
+      if (bien) { cumple(); } else { falla(); }
+    });
+  }
+
+  Array.prototype.forEach.call(enlaces, function (enlace) {
+    enlace.addEventListener('click', function () {
+      var correo = enlace.getAttribute('data-copiar');
+      copia(correo).then(
+        function () { muestra('Dirección copiada: ' + correo); },
+        function () { muestra('Escríbeme a ' + correo); }
+      );
+    });
+  });
+})();
