@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SEO Y REDES SOCIALES  ·  EDITAR: título, descripción y dominio
+     ═══════════════════════════════════════════════════════════════ -->
+<title>Francisco J. Padilla · Docente de Formación Profesional para el Empleo</title>
+<meta name="description" content="Docente acreditado por el Servicio Canario de Empleo en logística, almacén, aprovisionamiento, transporte, ofimática, RRHH e inteligencia artificial aplicada. 37 años de trayectoria. Presencial, teleformación y mixta. Tenerife, Canarias.">
+<meta name="author" content="Francisco Javier Padilla González">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://frandocencia.com/">
+
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Francisco J. Padilla · Docente FPE">
+<meta property="og:title" content="Francisco J. Padilla · Docente de Formación Profesional para el Empleo">
+<meta property="og:description" content="37 años de trayectoria, 30 en logística real. Docente acreditado por el SCE en 8 certificados y especialidades. Logística, ofimática, RRHH e IA aplicada.">
+<meta property="og:url" content="https://frandocencia.com/">
+<meta property="og:image" content="https://frandocencia.com/assets/img/og-portada.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<!-- Tipografías propias: ninguna petición a servidores de terceros -->
+<link rel="preload" href="assets/fonts/archivo-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fuentes.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- Fondo animado: nodos y rutas. Puramente decorativo. -->
+<canvas id="red" aria-hidden="true"></canvas>
+
+<!-- ══════════ NAVEGACIÓN ══════════ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#inicio" aria-label="Inicio">
+      <span class="brand__mark" aria-hidden="true">FJP</span>
+      <span class="brand__txt">Francisco J. Padilla<em>Docente FPE</em></span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#perfil">Perfil</a>
+      <a href="#areas">Qué imparto</a>
+      <a href="#acreditaciones">Acreditaciones</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#ia">IA y aula</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#formacion">Formación</a>
+    </nav>
+    <a class="btn btn--sm" href="#contacto">Contactar</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" id="menu-movil" hidden>
+    <a href="#perfil">Perfil</a>
+    <a href="#areas">Qué imparto</a>
+    <a href="#acreditaciones">Acreditaciones</a>
+    <a href="#metodologia">Metodología</a>
+    <a href="#ia">IA y aula</a>
+    <a href="#trayectoria">Trayectoria</a>
+    <a href="#formacion">Formación</a>
+    <a href="#cv">CV infográfico</a>
+    <a href="#contacto">Contactar</a>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- ══════════ 1 · PORTADA ══════════ -->
+<section class="hero" id="inicio">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="wrap hero__in">
+
+    <div class="hero__text">
+      <p class="eyebrow eyebrow--ok">
+        <span class="dot" aria-hidden="true"></span>
+        Docente acreditado · Servicio Canario de Empleo
+      </p>
+
+      <!-- EDITAR: nombre y titular -->
+      <h1 class="hero__name">Francisco J.<br>Padilla</h1>
+      <p class="hero__role">Docente de Formación Profesional para el Empleo</p>
+
+      <p class="hero__claim">«Transformo conocimiento en competencias.<br>Impulso talento, genero futuro.»</p>
+
+      <p class="hero__lede">
+        <span class="kw kw--warm">37 años de trayectoria profesional</span>, más de 30 de ellos en logística y almacén reales.
+        Formo en <span class="kw">logística, aprovisionamiento, transporte, almacén, ofimática, recursos
+        humanos e inteligencia artificial aplicada</span>, en aula presencial, aula virtual y
+        teleformación.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn" href="#contacto">Consultar disponibilidad</a>
+        <a class="btn btn--ghost" href="#metodologia">Ver metodología</a>
+        <!-- EDITAR: sustituye por tu CV en assets/docs/ -->
+        <a class="btn btn--plain" href="assets/docs/CV-Francisco-Padilla.pdf" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>
+          Descargar CV
+        </a>
+      </div>
+
+      <!-- ACCESOS DIRECTOS DE PORTADA -->
+      <p class="directo">
+        <span class="directo__lbl">O escríbeme directamente</span>
+        <a class="directo__l directo__l--wa" href="https://wa.me/34629551862?text=Hola%20Fran%2C%20te%20escribo%20desde%20tu%20web.%20Me%20gustar%C3%ADa%20consultarte%20la%20disponibilidad%20para%20una%20acci%C3%B3n%20formativa." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2.01a9.94 9.94 0 00-8.55 15.02L2 22l5.13-1.45a9.94 9.94 0 104.91-18.54zm0 1.82a8.12 8.12 0 11-4.13 15.1l-.3-.18-3.03.86.88-2.95-.2-.31a8.12 8.12 0 016.78-12.52zm4.6 10.3c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06a6.63 6.63 0 01-1.95-1.2 7.34 7.34 0 01-1.35-1.68c-.14-.24-.02-.37.11-.5l.37-.43c.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.44l-.76-1.83c-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.31-.22.25-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.57.25 1.02.4 1.37.5.58.19 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.15.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.47-.28z"/></svg>
+          WhatsApp
+        </a>
+        <a class="directo__l" href="mailto:padillaglez@gmail.com?subject=Consulta%20docente%20desde%20la%20web">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email
+        </a>
+        <a class="directo__l" href="tel:+34629551862">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.01l-2.2 2.21z"/></svg>
+          629 55 18 62
+        </a>
+      </p>
+
+      <ul class="hero__chips">
+        <li>La Laguna · Tenerife · Canarias</li>
+        <li>Presencial · Teleformación · Mixta</li>
+        <li>Disponibilidad inmediata</li>
+      </ul>
+    </div>
+
+    <figure class="hero__figure">
+      <div class="frame">
+        <span class="frame__tick frame__tick--tl" aria-hidden="true"></span>
+        <span class="frame__tick frame__tick--tr" aria-hidden="true"></span>
+        <span class="frame__tick frame__tick--bl" aria-hidden="true"></span>
+        <span class="frame__tick frame__tick--br" aria-hidden="true"></span>
+        <!-- EDITAR FOTO: sustituye este archivo manteniendo el nombre -->
+        <img src="assets/img/fran-hero.jpg" alt="Francisco J. Padilla, docente de formación profesional para el empleo" width="1122" height="1122" fetchpriority="high">
+      </div>
+      <figcaption class="frame__cap">
+        <span>FJP · DOCENTE FPE</span>
+        <span>TENERIFE — ES</span>
+      </figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<!-- ══════════ 2 · CIFRAS ══════════ -->
+<section class="stats" aria-label="Cifras de la trayectoria">
+  <div class="wrap stats__grid">
+    <div class="stat"><span class="stat__n" data-count="37">37</span><span class="stat__l">Años de trayectoria profesional</span></div>
+    <div class="stat"><span class="stat__n" data-count="8">8</span><span class="stat__l">Certificados y especialidades acreditados por el SCE</span></div>
+    <div class="stat"><span class="stat__n" data-count="270">270</span><span class="stat__l">Horas como formador y tutor registradas en FUNDAE</span></div>
+    <div class="stat"><span class="stat__n" data-count="25">25</span><span class="stat__l">Acciones formativas impartidas vía FUNDAE</span></div>
+    <div class="stat"><span class="stat__n" data-count="5200" data-prefix="+">+5.200</span><span class="stat__l">Horas de formación propia certificada</span></div>
+    <div class="stat"><span class="stat__n" data-count="9">9</span><span class="stat__l">Áreas de especialización docente</span></div>
+  </div>
+</section>
+
+<!-- ══════════ 3 · PERFIL ══════════ -->
+<section class="sec" id="perfil">
+  <div class="wrap">
+    <p class="eyebrow">Perfil</p>
+    <h2 class="h2">Empecé en un almacén.<br>Treinta años después sigo en él, del otro lado del aula.</h2>
+
+    <div class="perfil">
+      <div class="perfil__txt prose">
+        <p>Durante más de tres décadas trabajé en la logística real de una cooperativa farmacéutica:
+        despacho automático, preparación de pedidos por radiofrecuencia, robots de almacenaje
+        <span class="kw">SDA, TDA y OSR</span>, gestión en SAP, control de stock y reposición. Conozco el suelo
+        del almacén, la presión de una expedición y el error que cuesta dinero. Esa es la materia
+        prima con la que doy clase.</p>
+
+        <p>En 2022 di el salto a la docencia y me formé a fondo para hacerlo bien: <span class="kw">Certificado
+        de Profesionalidad Nivel 3 en Docencia de la Formación Profesional para el Empleo</span>,
+        Formación de Formadores en E-Learning, Metodología Didáctica, Evaluación en la Formación,
+        Tutorización del Aprendizaje en la Empresa y, en 2026, la especialización en el
+        <span class="kw">Procedimiento de Acreditación de Competencias Profesionales (PEAC)</span>.</p>
+
+        <p>Hoy soy docente <span class="kw kw--ok">acreditado por el Servicio Canario de Empleo</span> para ocho certificados y
+        especialidades, imparto en aula y en teleformación, y trabajo con lo que viene:
+        <span class="kw">inteligencia artificial aplicada</span> a la formación y a la empresa, automatización
+        de procesos y competencias digitales.</p>
+      </div>
+
+      <aside class="perfil__box">
+        <h3 class="h4">Por qué me contratan</h3>
+        <ul class="ticks">
+          <li><strong>Experiencia de campo, no solo de manual.</strong> He hecho el trabajo que enseño.</li>
+          <li><strong>Doble perfil poco habitual:</strong> logística + informática, redes y ciberseguridad.</li>
+          <li><strong>IA aplicada de verdad</strong> al diseño de materiales, a la evaluación y al aula.</li>
+          <li><strong>Acreditaciones verificables</strong> ante el SCE y registro de docencia en FUNDAE.</li>
+          <li><strong>Manejo la gestión, no solo la clase:</strong> SISPECAN, FUNDAE, FUNCATRA, SEPE y SCE.</li>
+          <li><strong>Documentación docente completa y en plazo.</strong> Sin sobresaltos en la auditoría.</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 4 · ÁREAS ══════════ -->
+<section class="sec sec--alt" id="areas">
+  <div class="wrap">
+    <p class="eyebrow">Qué imparto</p>
+    <h2 class="h2">Nueve áreas, un mismo criterio:<br>que salgan sabiendo hacerlo.</h2>
+
+    <div class="bento">
+      <article class="card card--wide">
+        <div class="card__head">
+          <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7 6h10M6.2 8l5 8M17.8 8l-5 8"/></svg></span>
+          <span class="card__code">01</span>
+        </div>
+        <h3 class="h3">Logística y cadena de suministro</h3>
+        <p>Optimización de la cadena logística, costes, indicadores, Agenda 2030 y sostenibilidad
+        aplicada a la operativa. Del plan de aprovisionamiento a la entrega final.</p>
+        <ul class="tags"><li>MF1005_3</li><li>COML018PO</li><li>COML0007</li></ul>
+      </article>
+
+      <article class="card">
+        <div class="card__head">
+          <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="13" width="7" height="7" rx="1"/><rect x="14" y="13" width="7" height="7" rx="1"/><rect x="8.5" y="4" width="7" height="7" rx="1"/></svg></span>
+          <span class="card__code">02</span>
+        </div>
+        <h3 class="h3">Almacén y aprovisionamiento</h3>
+        <p>Organización de almacenes, gestión de stock, inventarios, recepción y expedición,
+        planificación del aprovisionamiento y gestión de proveedores.</p>
+        <ul class="tags"><li>MF1014_3</li><li>MF1015_2</li><li>MF1003_3</li><li>MF1004_3</li></ul>
+      </article>
+
+      <article class="card">
+        <div class="card__head">
+          <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 16.5V6.5h11v10"/><path d="M14 9.5h4l3 3v4h-3"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
+          <span class="card__code">03</span>
+        </div>
+        <h3 class="h3">Transporte y distribución</h3>
+        <p>Tráfico de mercancías por carretera, distribución capilar, larga distancia y gestión
+        de flotas y rutas.</p>
+        <ul class="tags"><li>MF0247_3</li><li>MF0248_3</li><li>MF1012_3</li><li>MF1013_3</li></ul>
+      </article>
+
+      <article class="card">
+        <div class="card__head">
+          <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.2-2.9 7.6-7 8.6C7.9 18.6 5 15.2 5 11V6z"/><path d="M9.2 11.6l2 2 3.8-3.9"/></svg></span>
+          <span class="card__code">04</span>
+        </div>
+        <h3 class="h3">Carretillas elevadoras y PRL</h3>
+        <p>Conducción y manejo seguro, manipulación de cargas hasta 10.000 kg, prevención de
+        riesgos y reciclajes. Formación práctica en máquina.</p>
+        <ul class="tags"><li>MF0432_1</li><li>COML0008</li></ul>
+      </article>
+
+      <article class="card">
+        <div class="card__head">
+          <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+          <span class="card__code">05</span>
+        </div>
+        <h3 class="h3">Ofimática y competencias digitales</h3>
+        <p>Word, Excel, PowerPoint y Outlook con enfoque de puesto: control de inventarios con
+        Excel, factura digital y gestión documental.</p>
+        <ul class="tags"><li>MF0233_2</li><li>ADGG022PO</li></ul>
+      </article>
+
+      <article class="card">
+        <div class="card__head">
+          <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0112 0"/><path d="M16 6.6a3 3 0 010 5.8"/><path d="M17 14.6a6 6 0 014 5.4"/></svg></span>
+          <span class="card__code">06</span>
+        </div>
+        <h3 class="h3">Recursos humanos y talento</h3>
+        <p>Gestión integrada de RRHH, reclutamiento y selección, formación y desarrollo,
+        evaluación del desempeño y clima laboral.</p>
+        <ul class="tags"><li>Nivel 3</li><li>Gestión del talento</li></ul>
+      </article>
+
+      <article class="card">
+        <div class="card__head">
+          <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></span>
+          <span class="card__code">07</span>
+        </div>
+        <h3 class="h3">Informática, redes y ciberseguridad</h3>
+        <p>Sistemas microinformáticos, redes locales de datos, fibra óptica, Linux y seguridad
+        informática en la empresa.</p>
+        <ul class="tags"><li>Nivel 3</li><li>Nivel 2</li><li>Linux LPI</li></ul>
+      </article>
+
+      <article class="card card--accent">
+        <div class="card__head">
+          <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span>
+          <span class="card__code">08</span>
+        </div>
+        <h3 class="h3">IA y automatización inteligente</h3>
+        <p>Inteligencia artificial aplicada a la PYME y al aula: generación de contenidos,
+        automatización de procesos y uso crítico y ético de la IA.</p>
+        <ul class="tags"><li>IA para empresas</li><li>PYMES</li><li>Automatización</li></ul>
+      </article>
+
+      <article class="card card--wide">
+        <div class="card__head">
+          <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M9 14.4L8 22l4-2 4 2-1-7.6"/><path d="M9.6 9l1.8 1.8L15 7.2"/></svg></span>
+          <span class="card__code">09</span>
+        </div>
+        <h3 class="h3">PEAC · Acreditación de competencias profesionales</h3>
+        <p>Asesoramiento y evaluación en el Procedimiento de Acreditación de Competencias:
+        análisis y validación de evidencias, entrevistas profesionales, simulaciones, valoración
+        de unidades de competencia e itinerarios formativos.</p>
+        <ul class="tags"><li>Asesoramiento</li><li>Evaluación</li><li>Itinerarios</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 5 · ACREDITACIONES SCE ══════════ -->
+<section class="sec" id="acreditaciones">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--ok"><span class="dot" aria-hidden="true"></span>Acreditaciones oficiales</p>
+    <h2 class="h2">Habilitado por el Servicio Canario de Empleo<br>para ocho certificados y especialidades.</h2>
+    <p class="lead">Cada acreditación autoriza la impartición de los módulos formativos que se
+    detallan. Todas son <span class="kw kw--ok">verificables ante el SCE</span>.</p>
+
+    <div class="acred">
+      <article class="acr">
+        <header><span class="acr__code">COML0110</span><span class="acr__year">2024</span></header>
+        <h3 class="h4">Actividades Auxiliares de Almacén</h3>
+        <ul class="mf">
+          <li><b>MF1325_1</b> Operaciones auxiliares de almacenaje</li>
+          <li><b>MF1326_1</b> Preparación de pedidos</li>
+          <li><b>MF0432_1</b> Manipulación de cargas con carretillas elevadoras</li>
+        </ul>
+      </article>
+
+      <article class="acr">
+        <header><span class="acr__code">COML0109</span><span class="acr__year">2024</span></header>
+        <h3 class="h4">Tráfico de Mercancías por Carretera</h3>
+        <ul class="mf">
+          <li><b>MF0247_3</b> Organización del tráfico de mercancías</li>
+          <li><b>MF0248_3</b> Planificación del tráfico de mercancías</li>
+        </ul>
+      </article>
+
+      <article class="acr">
+        <header><span class="acr__code">COML0309</span><span class="acr__year">2024</span></header>
+        <h3 class="h4">Organización y Gestión de Almacenes</h3>
+        <ul class="mf">
+          <li><b>MF1005_3</b> Optimización de la cadena logística</li>
+          <li><b>MF1014_3</b> Organización de almacenes</li>
+          <li><b>MF1015_2</b> Gestión de las operaciones de almacenaje</li>
+        </ul>
+      </article>
+
+      <article class="acr">
+        <header><span class="acr__code">COML0210</span><span class="acr__year">2024</span></header>
+        <h3 class="h4">Gestión y Control del Aprovisionamiento</h3>
+        <ul class="mf">
+          <li><b>MF1003_3</b> Planificación del aprovisionamiento</li>
+          <li><b>MF1004_3</b> Gestión de proveedores</li>
+          <li><b>MF1005_3</b> Optimización de la cadena logística</li>
+        </ul>
+      </article>
+
+      <article class="acr">
+        <header><span class="acr__code">COML0209</span><span class="acr__year">2024</span></header>
+        <h3 class="h4">Organización del Transporte y la Distribución</h3>
+        <ul class="mf">
+          <li><b>MF1012_3</b> Distribución capilar</li>
+          <li><b>MF1013_3</b> Transporte de larga distancia</li>
+          <li><b>MF1005_3</b> Optimización de la cadena logística</li>
+        </ul>
+      </article>
+
+      <article class="acr">
+        <header><span class="acr__code">ADGG0208</span><span class="acr__year">2025</span></header>
+        <h3 class="h4">Actividades Administrativas en la Relación con el Cliente</h3>
+        <ul class="mf">
+          <li><b>MF0233_2</b> Ofimática <span class="pill">Transversal</span></li>
+        </ul>
+      </article>
+
+      <article class="acr acr--hi">
+        <header><span class="acr__code">COML20</span><span class="acr__year">2025</span></header>
+        <h3 class="h4">Actividades Básicas de Logística de Almacén</h3>
+        <ul class="mf">
+          <li>Conceptos logísticos básicos</li>
+          <li>Contexto laboral</li>
+          <li>Maquinaria y prevención de riesgos laborales</li>
+          <li>Operaciones auxiliares de almacén</li>
+        </ul>
+        <p class="acr__note"><b>125 h certificadas</b> por el SCE · presencial y teleformación</p>
+      </article>
+
+      <article class="acr">
+        <header><span class="acr__code">COML0008</span><span class="acr__year">2025</span></header>
+        <h3 class="h4">Conducción de Carretillas Elevadoras</h3>
+        <ul class="mf">
+          <li>Conducción y manejo seguro</li>
+          <li>Manipulación de cargas hasta 10.000 kg</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 6 · METODOLOGÍA ══════════ -->
+<section class="sec sec--alt" id="metodologia">
+  <div class="wrap">
+    <p class="eyebrow">Metodología didáctica</p>
+    <h2 class="h2">Del diagnóstico al puesto de trabajo.</h2>
+    <p class="lead">Un itinerario con cinco fases. Cada una produce evidencias, no impresiones.</p>
+
+    <ol class="flow">
+      <li class="flow__step">
+        <span class="flow__n">Fase 1</span>
+        <h3 class="h4">Detección de necesidades</h3>
+        <p>Qué sabe el grupo, qué pide el puesto y dónde está la distancia entre ambas cosas.</p>
+      </li>
+      <li class="flow__step">
+        <span class="flow__n">Fase 2</span>
+        <h3 class="h4">Diseño y planificación</h3>
+        <p>Programación didáctica alineada al certificado, resultados de aprendizaje y criterios de evaluación.</p>
+      </li>
+      <li class="flow__step">
+        <span class="flow__n">Fase 3</span>
+        <h3 class="h4">Aula y práctica guiada</h3>
+        <p>Metodologías activas, casos reales de almacén y empresa, y práctica sobre la herramienta.</p>
+      </li>
+      <li class="flow__step">
+        <span class="flow__n">Fase 4</span>
+        <h3 class="h4">Evaluación competencial</h3>
+        <p>Se evalúa el <span class="kw">desempeño, no la memoria</span>. Rúbricas, pruebas prácticas y feedback continuo.</p>
+      </li>
+      <li class="flow__step">
+        <span class="flow__n">Fase 5</span>
+        <h3 class="h4">Resultados y mejora</h3>
+        <p>Informe de seguimiento, análisis de resultados y ajuste del itinerario para la siguiente edición.</p>
+      </li>
+    </ol>
+
+    <div class="dos-col">
+      <div>
+        <h3 class="h3">Metodologías activas que aplico</h3>
+        <ul class="grid-tags">
+          <li>Aprendizaje basado en proyectos (ABP)</li>
+          <li>Aula invertida</li>
+          <li>Gamificación</li>
+          <li>Aprendizaje colaborativo</li>
+          <li>Aprendizaje experiencial</li>
+          <li>Estudio de casos reales</li>
+          <li>Simulación de operativa</li>
+          <li>Evaluación por competencias</li>
+          <li>Tutorización individualizada</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="h3">A qué doy prioridad</h3>
+        <ol class="prios">
+          <li><b>Que salgan sabiendo hacerlo</b>, no sabiendo repetirlo.</li>
+          <li><b>Empleabilidad real:</b> lo que la empresa pide hoy, con las herramientas de hoy.</li>
+          <li><b>Que nadie se quede atrás.</b> Ritmos distintos, seguimiento individualizado.</li>
+          <li><b>Seguridad y prevención antes que velocidad.</b> En almacén no se negocia.</li>
+          <li><b>Clima de aula:</b> respeto, participación y confianza para preguntar sin miedo.</li>
+          <li><b>Documentación impecable y en plazo</b> para el centro y para la administración.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 7 · IA ══════════ -->
+<section class="sec" id="ia">
+  <div class="wrap">
+    <p class="eyebrow">Inteligencia artificial en el aula</p>
+    <h2 class="h2">No hablo de IA.<br>La uso, y enseño a usarla.</h2>
+    <p class="lead"><span class="kw">Certificado en Inteligencia Artificial y Automatización Inteligente en PYMES</span>
+    (150 h, 2025) y docente de IA aplicada a la empresa, sea cual sea el sector.</p>
+
+    <div class="ia">
+      <article class="ia__item">
+        <h3 class="h4">Diseño y actualización de materiales</h3>
+        <p>Contenidos que se revisan cada edición, no manuales de hace cinco años.</p>
+      </article>
+      <article class="ia__item">
+        <h3 class="h4">Análisis y síntesis de documentación</h3>
+        <p>Normativa, BOE, programaciones y memorias tratadas con IA avanzada.</p>
+      </article>
+      <article class="ia__item">
+        <h3 class="h4">Automatización de la gestión docente</h3>
+        <p>Seguimiento, informes y documentación repetitiva, resueltos con flujos automatizados.</p>
+      </article>
+      <article class="ia__item">
+        <h3 class="h4">Alfabetización en IA del alumnado</h3>
+        <p>Que salgan sabiendo usar estas herramientas en su puesto, con criterio.</p>
+      </article>
+      <article class="ia__item">
+        <h3 class="h4">Uso ético y crítico</h3>
+        <p>Verificación de fuentes, protección de datos y límites claros de la herramienta.</p>
+      </article>
+      <article class="ia__item">
+        <h3 class="h4">IA aplicada al sector</h3>
+        <p>Los ejemplos se cambian según el grupo: almacén, transporte, administración,
+        comercio, servicios o industria. La herramienta es la misma; el caso, el suyo.</p>
+      </article>
+    </div>
+
+    <div class="tools">
+      <div class="tools__grp">
+        <h3 class="h5">IA y automatización</h3>
+        <ul><li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>Make</li><li>Lovable</li></ul>
+      </div>
+      <div class="tools__grp">
+        <h3 class="h5">ERP · CRM · SGA</h3>
+        <ul><li>SAP</li><li>Odoo</li><li>Factusol</li><li>Sage</li><li>HubSpot</li></ul>
+      </div>
+      <div class="tools__grp">
+        <h3 class="h5">Ofimática y nube</h3>
+        <ul><li>Word</li><li>Excel</li><li>PowerPoint</li><li>Outlook</li><li>OneNote</li><li>OneDrive</li></ul>
+      </div>
+      <div class="tools__grp">
+        <h3 class="h5">Aula virtual y LMS</h3>
+        <ul><li>Moodle</li><li>Aulas virtuales</li><li>Teleformación</li><li>Contenidos SCORM</li></ul>
+      </div>
+      <div class="tools__grp">
+        <h3 class="h5">Gestión de la formación</h3>
+        <ul><li>SISPECAN</li><li>FUNDAE</li><li>FUNCATRA</li><li>SEPE</li><li>SCE</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 8 · TRAYECTORIA ══════════ -->
+<section class="sec sec--alt" id="trayectoria">
+  <div class="wrap">
+    <p class="eyebrow">Trayectoria docente</p>
+    <h2 class="h2">Centros, ayuntamientos y empresas que ya han contado conmigo.</h2>
+
+    <div class="tl">
+      <div class="tl__yr">
+        <h3 class="tl__year">2026</h3>
+        <ul class="tl__items">
+          <li><b>ICADEPRO Formación</b> — Actividades Básicas de Logística de Almacén (COML20) · 125 h certificadas SCE</li>
+          <li><b>Akacenter</b> — Organización del Almacén (COML019PO), aula virtual · 2 ediciones</li>
+          <li><b>Proyectos Empresariales Canarios</b> — Formación en Inteligencia Artificial para Empresas, en acciones adaptadas a distintos sectores</li>
+        </ul>
+      </div>
+      <div class="tl__yr">
+        <h3 class="tl__year">2025</h3>
+        <ul class="tl__items">
+          <li><b>Grupo Lincea</b> — Gestión y Control del Aprovisionamiento (COML0210)</li>
+          <li><b>Hotel Escuela El Mirador</b> — Gestión Básica de Almacén (COMT07)</li>
+          <li><b>Grupo Eurocampus</b> — Actividades Auxiliares de Almacén (COML0110)</li>
+          <li><b>Asociación Creativa Vilaflor</b> — PIIIL El Roque, MF0233_2 Ofimática</li>
+          <li><b>Instituto de Formación y Empleo ESCOLA</b> — Carretillas elevadoras · 4 ediciones de 20 h</li>
+          <li><b>Urbiola Formación (Kala)</b> — Carretillas elevadoras, reciclaje · 2 ediciones</li>
+          <li><b>FPE Europea</b> — Tutorización de Gestión de Flotas y Rutas, teleformación</li>
+        </ul>
+      </div>
+      <div class="tl__yr">
+        <h3 class="tl__year">2024</h3>
+        <ul class="tl__items">
+          <li><b>PFAE Ayuntamiento de Candelaria</b> (Viernes Formación) — Logística y Organización en Almacenes; Gestión Administrativa</li>
+          <li><b>Instituto de Formación y Empleo ESCOLA</b> — Carretillas elevadoras · Control de Inventarios con Excel</li>
+          <li><b>FPE Europea</b> — Función Logística y Optimización de Costes · Factura Digital · Gestión de Flotas y Rutas</li>
+          <li><b>Modus Consulting</b> — Seguridad y manipulación de cargas con carretillas elevadoras</li>
+          <li><b>Urbiola Formación</b> — Carretillas elevadoras, reciclaje · 3 ediciones</li>
+        </ul>
+      </div>
+      <div class="tl__yr">
+        <h3 class="tl__year">2023 – 2024</h3>
+        <ul class="tl__items">
+          <li><b>Centro de Formación Empresarial AURA</b> — Docencia, gestión de documentación de alumnado, SEPE y SCE, SISPECAN, FUNDAE, FUNCATRA, AFCC y administración</li>
+        </ul>
+      </div>
+      <div class="tl__yr tl__yr--past">
+        <h3 class="tl__year">1990 – 2021</h3>
+        <ul class="tl__items">
+          <li><b>Cofarte</b> (Cooperativa Farmacéutica de Tenerife) — 30 años en logística de almacén: despacho automático y por radiofrecuencia, robots de almacenaje SDA, TDA y OSR, control y reposición, usuario SAP</li>
+          <li><b>Hospital Vithas Tenerife</b> — Admisión y atención al paciente, plataformas XHIS, SAP y SEOGA, facturación</li>
+          <li><b>Makro · Media Markt</b> — Logística, almacén y atención al cliente</li>
+          <li><b>Última Informática · Héctor Móviles · Fimadac 2000</b> — Técnico informático, redes locales y fibra óptica</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 9 · FORMACIÓN ══════════ -->
+<section class="sec" id="formacion">
+  <div class="wrap">
+    <p class="eyebrow">Formación y titulaciones</p>
+    <h2 class="h2">Más de <span class="kw kw--warm">5.200 horas</span> de formación certificada.</h2>
+
+    <div class="form-grid">
+      <details class="acc" open>
+        <summary><span>Certificados de profesionalidad</span><span class="acc__n">6</span></summary>
+        <ul class="fl">
+          <li><b>Docencia de la Formación Profesional para el Empleo</b> · Nivel 3 · ICSE, 2023 <em>380 h</em></li>
+          <li><b>Gestión Integrada de Recursos Humanos</b> · Nivel 3 · FOCAN, 2022 <em>800 h</em></li>
+          <li><b>Organización y Gestión de Almacenes</b> · Nivel 3 · INSFORCAN, 2022 <em>400 h</em></li>
+          <li><b>Seguridad Informática</b> · Nivel 3 · ESETEC, 2018 <em>500 h</em></li>
+          <li><b>Sistemas Microinformáticos</b> · Nivel 2 · Afilca, 2017 <em>610 h</em></li>
+          <li><b>Montaje y Mantenimiento de Sistemas de Telefonía e Infraestructuras de Redes Locales</b> · Nivel 2 · Fuerteventura 2000, 2016 <em>430 h</em></li>
+        </ul>
+      </details>
+
+      <details class="acc">
+        <summary><span>Docencia y metodología</span><span class="acc__n">6</span></summary>
+        <ul class="fl">
+          <li><b>Especialización en Procedimiento de Acreditación de Competencias Profesionales (PEAC)</b> · 2026</li>
+          <li><b>Formación de Formadores en E-Learning</b> · Viernes Formación, 2024 <em>120 h</em></li>
+          <li><b>Tutorización del Aprendizaje en la Empresa</b> · Iniciativas Organizativas de Empresa, 2024 <em>30 h</em></li>
+          <li><b>Metodología Didáctica</b> · AURA, 2023 <em>80 h</em></li>
+          <li><b>Evaluación en la Formación</b> · AURA, 2023 <em>40 h</em></li>
+          <li><b>Orientación Sociolaboral Avanzado</b> · AURA, 2023 <em>115 h</em></li>
+        </ul>
+      </details>
+
+      <details class="acc">
+        <summary><span>Inteligencia artificial y tecnología</span><span class="acc__n">9</span></summary>
+        <ul class="fl">
+          <li><b>Inteligencia Artificial y Automatización Inteligente en PYMES</b> · AFS, 2025 <em>150 h</em></li>
+          <li><b>Junior Level Linux Professional (LPI)</b> · ESETEC, 2018 <em>210 h</em></li>
+          <li><b>Ciberseguridad en el Trabajo</b> · Google e INCIBE, 2018 <em>20 h</em></li>
+          <li><b>Competencias Digitales para Profesionales</b> · Google y Fundación Santa María la Real, 2018 <em>40 h</em></li>
+          <li><b>Cloud Computing</b> · Google y EOI, 2018 <em>40 h</em></li>
+          <li><b>Introducción al Desarrollo Web</b> · Google e Instituto de Economía Internacional, 2018 <em>40 h</em></li>
+          <li><b>Desarrollo de Apps Móviles</b> · Google y Universidad Complutense de Madrid, 2018 <em>40 h</em></li>
+          <li><b>Marketing Digital</b> · Google e IAB Spain, 2018 <em>40 h</em></li>
+          <li><b>Instalador de Fibra Óptica</b> · Femete, 2016 <em>20 h</em></li>
+        </ul>
+      </details>
+
+      <details class="acc">
+        <summary><span>Ofimática y gestión</span><span class="acc__n">7</span></summary>
+        <ul class="fl">
+          <li><b>Técnico en Software Ofimático</b> · AURA, 2023 <em>350 h</em></li>
+          <li><b>Procedimientos Básicos en Marketing Digital y Redes Sociales</b> · AURA, 2023 <em>125 h</em></li>
+          <li><b>Habilidades de Comunicación con el Cliente para Vendedores</b> · AURA, 2023 <em>50 h</em></li>
+          <li><b>Excel Aplicado a la Gestión Comercial</b> · Fundación Telefónica, 2018 <em>75 h</em></li>
+          <li><b>Office Intermedio y Office Básico</b> · Fundación Telefónica, 2018 <em>40 h</em></li>
+          <li><b>Diseño de Páginas Web</b> · Forma Select, 2009 <em>77 h</em></li>
+          <li><b>Photoshop</b> · UGT y Servicio Canario de Empleo, 2010 <em>65 h</em></li>
+        </ul>
+      </details>
+
+      <details class="acc">
+        <summary><span>Logística, almacén y prevención</span><span class="acc__n">5</span></summary>
+        <ul class="fl">
+          <li><b>Carnet de Operador de Carretillas Elevadoras</b> · Avanti Formación, 2016 <em>20 h</em></li>
+          <li><b>Prevención de Riesgos Laborales para Mozo de Almacén y Reponedor</b> · Avanti Formación, 2016 <em>8 h</em></li>
+          <li><b>Manipulador de Alimentos de Alto Riesgo</b> · Avanti Formación, 2016 <em>5 h</em></li>
+          <li><b>Técnicas de Trabajo en Equipo Aplicadas a la Gestión de Almacén</b> · Icafor, 2010 <em>9 h</em></li>
+          <li><b>Comunicación Interna y Protocolo en la Empresa</b> · Modus Consulting, 2013 <em>36 h</em></li>
+        </ul>
+      </details>
+
+      <details class="acc">
+        <summary><span>Formación académica e idiomas</span><span class="acc__n">3</span></summary>
+        <ul class="fl">
+          <li><b>FP II · Grado Superior en Mantenimiento y Servicios a la Producción</b> (Máquinas y Herramientas, CNC) · CIFP Virgen de Candelaria, 1988</li>
+          <li><b>Vendedor de Comercio</b> · Ministerio de Trabajo y Seguridad Social, 1989 <em>200 h</em></li>
+          <li><b>Idiomas:</b> español nativo · inglés B1</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 10 · CV INFOGRÁFICO ══════════ -->
+<section class="sec sec--alt" id="cv">
+  <div class="wrap">
+    <p class="eyebrow">Documento</p>
+    <h2 class="h2">CV infográfico.</h2>
+    <p class="lead">Toda la trayectoria en una sola página. Pulsa para ampliar o descárgala en alta resolución.</p>
+
+    <figure class="cvfig">
+      <button class="cvfig__btn" id="cv-zoom" aria-label="Ampliar el CV infográfico">
+        <!-- EDITAR: sustituye este archivo manteniendo el nombre -->
+        <img src="assets/img/cv-infografico.jpg" alt="CV infográfico de Francisco J. Padilla con datos personales, identidad profesional, competencias clave, herramientas, trayectoria docente y metodologías" width="1086" height="1448" loading="lazy">
+        <span class="cvfig__hint">Ampliar</span>
+      </button>
+      <figcaption>
+        <a class="btn btn--ghost" href="assets/img/cv-infografico.jpg" download>Descargar infografía</a>
+        <a class="btn btn--plain" href="assets/docs/CV-Francisco-Padilla.pdf" download>Descargar CV en PDF</a>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════ 11 · PARA QUIÉN ══════════ -->
+<section class="sec" id="colaboro">
+  <div class="wrap">
+    <p class="eyebrow">Con quién colaboro</p>
+    <h2 class="h2">Y qué aporto a cada uno.</h2>
+
+    <div class="quien">
+      <article class="qcard">
+        <h3 class="h4">Centros colaboradores del SCE</h3>
+        <p>Docente ya acreditado para ocho certificados y especialidades: sin trámites previos de
+        habilitación. Programación, documentación y SISPECAN al día.</p>
+      </article>
+      <article class="qcard">
+        <h3 class="h4">Academias y centros de formación privados</h3>
+        <p>Cobertura amplia de catálogo — logística, ofimática, RRHH, informática e IA — con un
+        solo docente y en las tres modalidades.</p>
+      </article>
+      <article class="qcard">
+        <h3 class="h4">Ayuntamientos y programas de empleo</h3>
+        <p>Experiencia en PFAE y PIIIL con colectivos en inserción: enfoque práctico, paciencia y
+        seguimiento individualizado.</p>
+      </article>
+      <article class="qcard">
+        <h3 class="h4">Empresas · formación bonificada</h3>
+        <p>25 acciones formativas registradas en FUNDAE. Formación en máquina, en almacén y en
+        oficina, adaptada a la operativa real de la plantilla.</p>
+      </article>
+      <article class="qcard">
+        <h3 class="h4">Asociaciones y organismos sociales</h3>
+        <p>Itinerarios de inserción, alfabetización digital y competencias básicas para el empleo.</p>
+      </article>
+      <article class="qcard">
+        <h3 class="h4">Plataformas de teleformación</h3>
+        <p>Tutorización en aula virtual y teleformación: dinamización de foros, seguimiento de
+        conexiones e informes de actividad.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 12 · CONTACTO ══════════ -->
+<section class="sec sec--contacto" id="contacto">
+  <div class="wrap">
+    <p class="eyebrow">Contacto</p>
+    <h2 class="h2">¿Necesitas un docente para tu próxima acción formativa?</h2>
+    <p class="lead">Cuéntame el certificado, las fechas y la modalidad. Respondo en menos de 24 horas.</p>
+
+    <div class="contacto">
+      <form class="form" id="form-contacto" novalidate>
+        <!-- Web3Forms: pega aquí tu clave (ver GUIA.md, apartado «Formulario») -->
+        <input type="hidden" name="access_key" value="TU_ACCESS_KEY_DE_WEB3FORMS">
+        <input type="hidden" name="subject" value="Nueva consulta desde la web de Francisco J. Padilla">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+        <div class="field">
+          <label for="f-nombre">Nombre y entidad <span aria-hidden="true">*</span></label>
+          <input id="f-nombre" name="nombre" type="text" required autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span aria-hidden="true">*</span></label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="f-tel">Teléfono</label>
+          <input id="f-tel" name="telefono" type="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="f-tipo">Tipo de colaboración</label>
+          <select id="f-tipo" name="tipo">
+            <option>Certificado de profesionalidad</option>
+            <option>Especialidad formativa / curso SCE</option>
+            <option>Formación bonificada FUNDAE</option>
+            <option>Teleformación o tutorización en aula virtual</option>
+            <option>Formación en carretillas elevadoras</option>
+            <option>Formación en IA y competencias digitales</option>
+            <option>PEAC · acreditación de competencias</option>
+            <option>Otra</option>
+          </select>
+        </div>
+        <div class="field field--full">
+          <label for="f-msg">Mensaje <span aria-hidden="true">*</span></label>
+          <textarea id="f-msg" name="mensaje" rows="5" required placeholder="Certificado o curso, número de horas, fechas previstas, modalidad y localidad."></textarea>
+        </div>
+        <div class="field field--full check">
+          <input id="f-rgpd" name="rgpd" type="checkbox" required>
+          <label for="f-rgpd">He leído y acepto la
+            <a href="privacidad.html" data-doc="privacidad">política de privacidad</a>.</label>
+        </div>
+        <div class="field field--full">
+          <button class="btn btn--wide" type="submit" id="btn-enviar">Enviar consulta</button>
+          <p class="form__msg" id="form-msg" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <aside class="datos">
+        <h3 class="h5">Escríbeme directamente</h3>
+
+        <!-- ACCESOS DIRECTOS · EDITAR: correo, móvil y texto del WhatsApp -->
+        <div class="vias">
+          <a class="via via--wa" href="https://wa.me/34629551862?text=Hola%20Fran%2C%20te%20escribo%20desde%20tu%20web.%20Me%20gustar%C3%ADa%20consultarte%20la%20disponibilidad%20para%20una%20acci%C3%B3n%20formativa." target="_blank" rel="noopener">
+            <span class="via__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2.01a9.94 9.94 0 00-8.55 15.02L2 22l5.13-1.45a9.94 9.94 0 104.91-18.54zm0 1.82a8.12 8.12 0 11-4.13 15.1l-.3-.18-3.03.86.88-2.95-.2-.31a8.12 8.12 0 016.78-12.52zm4.6 10.3c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06a6.63 6.63 0 01-1.95-1.2 7.34 7.34 0 01-1.35-1.68c-.14-.24-.02-.37.11-.5l.37-.43c.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.44l-.76-1.83c-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.31-.22.25-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.57.25 1.02.4 1.37.5.58.19 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.15.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.47-.28z"/></svg>
+            </span>
+            <span class="via__txt"><small>WhatsApp</small><b>Escribir ahora</b></span>
+            <span class="via__go" aria-hidden="true">→</span>
+          </a>
+
+          <a class="via" href="mailto:padillaglez@gmail.com?subject=Consulta%20docente%20desde%20la%20web">
+            <span class="via__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </span>
+            <span class="via__txt"><small>Email</small><b>padillaglez@gmail.com</b></span>
+            <span class="via__go" aria-hidden="true">→</span>
+          </a>
+
+          <!-- EDITAR / BORRAR: si no quieres publicar el móvil, elimina este bloque <a> completo -->
+          <a class="via" href="tel:+34629551862">
+            <span class="via__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.01l-2.2 2.21z"/></svg>
+            </span>
+            <span class="via__txt"><small>Teléfono</small><b>629 55 18 62</b></span>
+            <span class="via__go" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <h3 class="h5">Dónde y cuándo</h3>
+        <ul class="datos__list">
+          <li>
+            <span>Ubicación</span>
+            <p>La Laguna · Tenerife · Canarias</p>
+          </li>
+          <li>
+            <span>Ámbito</span>
+            <p>Toda Canarias en presencial · España completa en teleformación</p>
+          </li>
+          <li>
+            <span>Disponibilidad</span>
+            <p>Inmediata · vehículo propio</p>
+          </li>
+        </ul>
+
+        <h3 class="h5">Redes</h3>
+        <div class="redes">
+          <a href="https://www.linkedin.com/in/docente-log-tec-inf/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/frandocencia67/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ PIE ══════════ -->
+<footer class="pie">
+  <div class="wrap pie__in">
+    <div class="pie__brand">
+      <span class="brand__mark" aria-hidden="true">FJP</span>
+      <p>Francisco Javier Padilla González<br><em>Docente de Formación Profesional para el Empleo</em></p>
+    </div>
+    <nav class="pie__nav" aria-label="Pie de página">
+      <a href="#perfil">Perfil</a>
+      <a href="#areas">Qué imparto</a>
+      <a href="#acreditaciones">Acreditaciones</a>
+      <a href="#contacto">Contacto</a>
+      <a href="aviso-legal.html" data-doc="aviso-legal">Aviso legal</a>
+      <a href="privacidad.html" data-doc="privacidad">Privacidad</a>
+    </nav>
+
+    <div class="pie__vias">
+      <a href="https://wa.me/34629551862" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2.01a9.94 9.94 0 00-8.55 15.02L2 22l5.13-1.45a9.94 9.94 0 104.91-18.54zm0 1.82a8.12 8.12 0 11-4.13 15.1l-.3-.18-3.03.86.88-2.95-.2-.31a8.12 8.12 0 016.78-12.52zm4.6 10.3c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06a6.63 6.63 0 01-1.95-1.2 7.34 7.34 0 01-1.35-1.68c-.14-.24-.02-.37.11-.5l.37-.43c.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.44l-.76-1.83c-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.31-.22.25-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.57.25 1.02.4 1.37.5.58.19 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.15.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.47-.28z"/></svg>
+      </a>
+      <a href="mailto:padillaglez@gmail.com" aria-label="Enviar un correo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+      <a href="tel:+34629551862" aria-label="Llamar por teléfono">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.01l-2.2 2.21z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/docente-log-tec-inf/" target="_blank" rel="noopener" aria-label="Perfil de LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM3 9h4v12H3V9zm6 0h3.8v1.65h.05A4.17 4.17 0 0116.6 8.7c4 0 4.74 2.5 4.74 5.76V21h-4v-5.75c0-1.37-.03-3.13-1.96-3.13-1.96 0-2.26 1.49-2.26 3.03V21H9V9z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/frandocencia67/" target="_blank" rel="noopener" aria-label="Perfil de Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.8 3.8 0 01-1.38-.9 3.8 3.8 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.28a6.56 6.56 0 100 13.12 6.56 6.56 0 000-13.12zm0 10.82a4.26 4.26 0 110-8.52 4.26 4.26 0 010 8.52zm8.35-11.08a1.53 1.53 0 11-3.06 0 1.53 1.53 0 013.06 0z"/></svg>
+      </a>
+    </div>
+
+    <p class="pie__copy">© <span id="anio">2026</span> Francisco Javier Padilla González. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a class="flota" href="https://wa.me/34629551862?text=Hola%20Fran%2C%20te%20escribo%20desde%20tu%20web." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2.01a9.94 9.94 0 00-8.55 15.02L2 22l5.13-1.45a9.94 9.94 0 104.91-18.54zm0 1.82a8.12 8.12 0 11-4.13 15.1l-.3-.18-3.03.86.88-2.95-.2-.31a8.12 8.12 0 016.78-12.52zm4.6 10.3c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06a6.63 6.63 0 01-1.95-1.2 7.34 7.34 0 01-1.35-1.68c-.14-.24-.02-.37.11-.5l.37-.43c.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.44l-.76-1.83c-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.31-.22.25-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.57.25 1.02.4 1.37.5.58.19 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.15.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.47-.28z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<!-- Visor del CV infográfico -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lightbox-close" aria-label="Cerrar">&times;</button>
+  <img src="assets/img/cv-infografico.jpg" alt="CV infográfico de Francisco J. Padilla, ampliado">
+</div>
+
+<!-- Datos estructurados para buscadores -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Francisco Javier Padilla González",
+  "alternateName": "Francisco J. Padilla",
+  "jobTitle": "Docente de Formación Profesional para el Empleo",
+  "email": "mailto:padillaglez@gmail.com",
+  "url": "https://frandocencia.com/",
+  "address": { "@type": "PostalAddress", "addressLocality": "San Cristóbal de La Laguna", "addressRegion": "Santa Cruz de Tenerife", "addressCountry": "ES" },
+  "sameAs": [
+    "https://www.linkedin.com/in/docente-log-tec-inf/",
+    "https://www.instagram.com/frandocencia67/"
+  ],
+  "knowsAbout": [
+    "Logística y cadena de suministro","Organización y gestión de almacenes","Aprovisionamiento",
+    "Transporte y distribución de mercancías","Carretillas elevadoras y prevención de riesgos laborales",
+    "Ofimática y competencias digitales","Gestión integrada de recursos humanos",
+    "Seguridad informática y redes","Inteligencia artificial aplicada a la formación",
+    "Acreditación de competencias profesionales (PEAC)"
+  ],
+  "knowsLanguage": ["es","en"],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "Certificado de Profesionalidad Nivel 3 · Docencia de la Formación Profesional para el Empleo" },
+    { "@type": "EducationalOccupationalCredential", "name": "Certificado de Profesionalidad Nivel 3 · Gestión Integrada de Recursos Humanos" },
+    { "@type": "EducationalOccupationalCredential", "name": "Certificado de Profesionalidad Nivel 3 · Organización y Gestión de Almacenes" },
+    { "@type": "EducationalOccupationalCredential", "name": "Certificado de Profesionalidad Nivel 3 · Seguridad Informática" },
+    { "@type": "EducationalOccupationalCredential", "name": "Acreditación docente del Servicio Canario de Empleo" }
+  ]
+}
+</script>
+
+<!-- ══════════ VENTANA DE DOCUMENTOS LEGALES ══════════
+     El texto completo se muestra aquí superpuesto, para no ocupar la
+     página. Las páginas privacidad.html y aviso-legal.html siguen
+     existiendo con dirección propia, como exigen la LSSI y el RGPD. -->
+<div class="doc" id="doc" hidden>
+  <div class="doc__fondo" data-cerrar></div>
+  <div class="doc__caja" role="dialog" aria-modal="true" aria-labelledby="doc-titulo">
+
+    <header class="doc__cab">
+      <div>
+        <p class="eyebrow" id="doc-eyebrow">Información legal</p>
+        <h2 class="doc__titulo" id="doc-titulo">Documento</h2>
+      </div>
+      <button class="doc__x" type="button" data-cerrar aria-label="Cerrar">&times;</button>
+    </header>
+
+    <div class="doc__cuerpo" id="doc-cuerpo" tabindex="0">
+      <p class="doc__cargando">Cargando el documento…</p>
+    </div>
+
+    <footer class="doc__pie">
+      <a class="doc__link" id="doc-enlace" href="privacidad.html" target="_blank" rel="noopener">
+        Abrir en una pestaña nueva
+      </a>
+      <div class="doc__botones">
+        <button class="btn btn--ghost" type="button" data-cerrar>Cerrar</button>
+        <button class="btn" type="button" id="doc-aceptar" hidden>He leído y acepto</button>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
