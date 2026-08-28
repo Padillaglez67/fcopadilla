@@ -117,6 +117,18 @@
     por la propia arquitectura de internet y se utilizan exclusivamente con fines de seguridad,
     detección de incidencias y funcionamiento del servicio.</p>
 
+    <h3>3.3 bis. Datos de medición de audiencia</h3>
+    <p>Este sitio utiliza <strong>Cloudflare Web Analytics</strong> para conocer, de forma agregada,
+    cuántas visitas recibe. La herramienta <strong>no instala cookies ni identificadores persistentes</strong>
+    en el dispositivo. Para estimar si una visita es nueva o recurrente, el proveedor combina en su
+    servidor la dirección IP y las cabeceras de la petición, genera un <em>valor resumen</em> (<em>hash</em>)
+    y <strong>descarta inmediatamente los datos de origen</strong>, sin conservarlos ni asociarlos a
+    ninguna persona identificada o identificable.</p>
+    <p>La información que llega al responsable es <strong>únicamente estadística y agregada</strong>:
+    número de páginas vistas y de visitas, páginas más consultadas, país de procedencia, tipo de
+    dispositivo, navegador y sitio de referencia. <strong>No permite identificar a ningún visitante
+    concreto</strong>, ni reconstruir su recorrido individual, ni seguirle en otros sitios web.</p>
+
     <h3>3.4. Datos que no se tratan</h3>
     <p>No se solicitan ni se tratan <strong>categorías especiales de datos</strong> del artículo 9 del
     RGPD —origen étnico o racial, opiniones políticas, convicciones religiosas o filosóficas,
@@ -156,6 +168,11 @@
             <td>Garantizar la seguridad del sitio, prevenir usos abusivos y mantener el servicio operativo</td>
             <td>Artículo 6.1.f) RGPD — <strong>interés legítimo</strong> del responsable</td>
             <td>Interés legítimo en la integridad y disponibilidad del sitio, ponderado frente a los derechos del interesado, con impacto mínimo por tratarse de datos técnicos y de conservación breve.</td>
+          </tr>
+          <tr>
+            <td>Medir de forma agregada la audiencia del sitio para conocer su alcance y decidir sobre sus contenidos</td>
+            <td>Artículo 6.1.f) RGPD — <strong>interés legítimo</strong> del responsable</td>
+            <td>Interés legítimo en conocer si el sitio cumple su función de difusión profesional. La medición es agregada, no emplea cookies ni identificadores persistentes y no permite identificar a ninguna persona, por lo que el impacto sobre sus derechos es mínimo. Puede oponerse conforme al apartado 16.</td>
           </tr>
           <tr>
             <td>Atender el ejercicio de derechos y acreditar el cumplimiento normativo</td>
@@ -208,6 +225,11 @@
             <td>Finalidad de seguridad y diagnóstico.</td>
           </tr>
           <tr>
+            <td>Estadísticas agregadas de audiencia</td>
+            <td>Mientras se utilice el servicio de medición</td>
+            <td>No contienen datos personales: los identificadores de origen se descartan en el momento de la visita y solo se conserva el dato agregado.</td>
+          </tr>
+          <tr>
             <td>Constancia del ejercicio de derechos</td>
             <td><strong>3 años</strong> desde la respuesta</td>
             <td>Acreditación del cumplimiento (art. 5.2 RGPD).</td>
@@ -248,15 +270,24 @@
             <td>Recepción, almacenamiento y respuesta de mensajes</td>
             <td>Datos identificativos y contenido de la correspondencia</td>
           </tr>
+          <tr>
+            <td>Cloudflare, Inc.</td>
+            <td>Medición agregada de la audiencia del sitio (<em>Cloudflare Web Analytics</em>)</td>
+            <td>Dirección IP y cabeceras de la petición, usadas en el momento y descartadas tras generar un valor resumen</td>
+          </tr>
         </tbody>
       </table>
     </div>
 
     <p>Las <strong>tipografías y el resto de recursos gráficos</strong> de este sitio se sirven desde el
-    propio dominio. La navegación por esta web <strong>no genera ninguna petición a servidores de
-    terceros</strong> —ni a servicios de tipografías, ni a redes de distribución de contenidos, ni a
-    herramientas de analítica—, de modo que ningún tercero recibe la dirección IP del visitante por el
-    simple hecho de cargar la página.</p>
+    propio dominio: no se realiza ninguna petición a servicios de tipografías ni a redes de
+    distribución de contenidos de terceros.</p>
+    <p>La <strong>única petición a un servidor ajeno</strong> que genera la navegación por esta web es la
+    del <em>script</em> de medición de audiencia descrito en el apartado 3.3 bis, que se carga desde
+    <code>static.cloudflareinsights.com</code>. Por ese motivo, Cloudflare recibe la dirección IP del
+    visitante, si bien la utiliza únicamente en ese instante y la descarta sin conservarla, según se
+    detalla en dicho apartado. Ningún otro tercero recibe la dirección IP por el simple hecho de cargar
+    la página.</p>
 
     <p>Además, los datos podrán comunicarse a <strong>juzgados y tribunales, Fuerzas y Cuerpos de
     Seguridad, la Agencia Estatal de Administración Tributaria y demás administraciones públicas
@@ -276,6 +307,9 @@
       artículo 46.2.c) del RGPD, complementadas cuando proceda con medidas suplementarias tras la
       correspondiente evaluación de impacto de la transferencia.</li>
     </ul>
+    <p>En particular, <strong>GitHub, Inc.</strong> y <strong>Cloudflare, Inc.</strong> son entidades
+    estadounidenses <strong>adheridas y certificadas en el Marco de Privacidad de Datos UE-EE. UU.</strong>,
+    por lo que sus transferencias quedan amparadas por la decisión de adecuación citada.</p>
     <p>Puede solicitarse información sobre las garantías aplicadas, y copia de estas, escribiendo a
     la dirección indicada en el apartado 1.</p>
 
@@ -296,10 +330,18 @@
       <li><strong>No emplea</strong> píxeles de seguimiento, balizas web, huellas digitales del
       dispositivo (<em>fingerprinting</em>), identificadores publicitarios ni almacenamiento local
       (<em>localStorage</em> o <em>sessionStorage</em>) con fines de seguimiento.</li>
-      <li><strong>No incorpora</strong> herramientas de analítica web de ningún tipo.</li>
+      <li><strong>No incorpora</strong> herramientas de analítica que instalen cookies, que almacenen o
+      recuperen información del dispositivo, o que permitan seguir a una persona entre distintos
+      sitios web.</li>
     </ul>
+    <p>Sí se utiliza una <strong>herramienta de medición de audiencia sin cookies</strong>, Cloudflare
+    Web Analytics, descrita en el apartado 3.3 bis. Al no almacenar ni recuperar ningún dato en el
+    equipo del visitante, <strong>queda fuera del ámbito del artículo 22.2 de la LSSI-CE</strong>, que
+    somete a consentimiento el almacenamiento y el acceso a la información del dispositivo.</p>
     <p>Por este motivo <strong>no se muestra banner de cookies</strong>: no hay tratamiento que requiera
-    consentimiento previo conforme al citado artículo 22.2.</p>
+    consentimiento previo conforme al citado artículo 22.2. El tratamiento de la dirección IP que
+    conlleva esa medición se ampara en el interés legítimo del responsable, conforme al apartado 4, y
+    puede oponerse a él en los términos del apartado 16.</p>
     <p>Si en el futuro se incorporase alguna cookie no exenta del deber de consentimiento, se
     implantará previamente un sistema de información y consentimiento acorde con la normativa y se
     actualizará esta política.</p>
@@ -452,7 +494,7 @@
     juzgados y tribunales que correspondan conforme a la normativa procesal vigente, sin perjuicio del
     fuero que legalmente corresponda a la persona consumidora cuando proceda.</p>
 
-    <p class="fecha-legal"><em>Última actualización: 20 de agosto de 2026. Versión 1.1.</em></p>
+    <p class="fecha-legal"><em>Última actualización: 25 de agosto de 2026. Versión 1.2.</em></p>
 
     <a class="legal__back" href="index.html">← Volver al inicio</a>
   </div>
@@ -470,5 +512,8 @@
   </div>
 </footer>
 
+
+<!-- Analítica de audiencia sin cookies (Cloudflare Web Analytics) -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2352332e9131429e909efda6d15ac0cc"}'></script>
 </body>
 </html>
