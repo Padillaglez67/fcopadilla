@@ -25,6 +25,24 @@
 <link rel="preload" href="assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fuentes.css">
 <link rel="stylesheet" href="assets/css/styles.css">
+
+<style>
+  /* Selector de fichas de la portada del catálogo. Reutiliza .grid-tags y
+     solo añade lo propio del enlace, para no tocar la hoja común. */
+  .fichas{ margin-top:.9rem; }
+  .fichas li{ padding:0; }
+  .fichas a{
+    display:block; padding:.55rem .95rem; text-decoration:none; color:var(--ink-2);
+    transition:color .18s ease;
+  }
+  .fichas a b{
+    font-family:var(--f-mono); font-size:.8rem; font-weight:600; letter-spacing:.03em;
+    color:var(--accent); margin-right:.45rem;
+  }
+  .fichas li:hover{ border-color:var(--accent); }
+  .fichas a:hover{ color:var(--ink); }
+  #ir-a-ficha{ margin:2.4rem 0 0; }
+</style>
 </head>
 
 <body>
@@ -70,8 +88,20 @@
     puedo aportar la resolución de cualquiera de ellas.</p>
     <p class="hero__cta">
       <a class="btn" href="index.html#contacto">Solicitar disponibilidad</a>
-      <a class="btn btn--ghost" href="coml0008-carretillas-elevadoras.html">Ver una ficha completa</a>
+      <a class="btn btn--ghost" href="#acreditaciones">Ver las ocho acreditaciones</a>
     </p>
+
+    <h2 class="h5" id="ir-a-ficha">Ir directamente a una ficha</h2>
+    <ul class="grid-tags fichas" aria-labelledby="ir-a-ficha">
+      <li><a href="coml0110-actividades-auxiliares-almacen.html"><b>COML0110</b> Actividades Auxiliares de Almacén</a></li>
+      <li><a href="coml0309-organizacion-gestion-almacenes.html"><b>COML0309</b> Organización y Gestión de Almacenes</a></li>
+      <li><a href="coml0210-gestion-control-aprovisionamiento.html"><b>COML0210</b> Gestión y Control del Aprovisionamiento</a></li>
+      <li><a href="coml0209-organizacion-transporte-distribucion.html"><b>COML0209</b> Organización del Transporte y la Distribución</a></li>
+      <li><a href="coml0109-trafico-mercancias-carretera.html"><b>COML0109</b> Tráfico de Mercancías por Carretera</a></li>
+      <li><a href="coml20-actividades-basicas-logistica-almacen.html"><b>COML20</b> Actividades Básicas de Logística de Almacén</a></li>
+      <li><a href="coml0008-carretillas-elevadoras.html"><b>COML0008</b> Conducción de Carretillas Elevadoras</a></li>
+      <li><a href="adgg0208-mf0233-ofimatica.html"><b>MF0233_2</b> Ofimática</a></li>
+    </ul>
   </div>
 </section>
 
@@ -79,20 +109,24 @@
 <section class="stats" aria-label="Alcance de la acreditación">
   <div class="wrap stats__grid">
     <div class="stat"><span class="stat__n">8</span><span class="stat__l">Acreditaciones docentes del Servicio Canario de Empleo</span></div>
-    <div class="stat"><span class="stat__n">5</span><span class="stat__l">Certificados de profesionalidad completos</span></div>
+    <div class="stat"><span class="stat__n">5</span><span class="stat__l">Certificados de profesionalidad en los que imparto módulos</span></div>
     <div class="stat"><span class="stat__n">13</span><span class="stat__l">Módulos formativos distintos habilitados</span></div>
     <div class="stat"><span class="stat__n">2</span><span class="stat__l">Especialidades formativas: COML20 y COML0008</span></div>
   </div>
 </section>
 
 <!-- ══════════ 3 · LAS OCHO ACREDITACIONES ══════════ -->
-<section class="sec sec--alt">
+<section class="sec sec--alt" id="acreditaciones">
   <div class="wrap">
     <p class="eyebrow">Acreditaciones oficiales</p>
     <h2 class="h2">Ocho acreditaciones docentes<br>del Servicio Canario de Empleo.</h2>
     <p class="lead">Cada acreditación autoriza la impartición de los módulos formativos que se
-    detallan. <b>Cada una tiene su ficha</b> con los módulos, dónde la he impartido y cómo la
-    trabajo en el aula.</p>
+    detallan. <b>Cada una tiene su ficha</b> con los datos oficiales del certificado, los módulos
+    con sus horas, dónde la he impartido y cómo la trabajo en el aula.</p>
+    <p class="lead">Un detalle que prefiero decir de entrada: tres de estos certificados
+    —COML0210, COML0209 y COML0109— incluyen el módulo <b>MF1006_2 de inglés profesional</b>, y
+    <b>no estoy acreditado para impartirlo</b>. Lo imparte un docente de idiomas, como es habitual.
+    En cada ficha está indicado.</p>
 
     <div class="acred">
       <article class="acr acr--hi">
