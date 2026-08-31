@@ -613,10 +613,29 @@ a{ color:inherit; }
   body{ background:#fff; color:#000; font-size:11pt; }
   .nav,.hero__grid,.burger,.nav__mobile,.hero__cta,.form,.lightbox,.cvfig__hint,.skip{ display:none !important; }
   .hero::after{ display:none; }
-  .sec{ padding-block:1.5rem; break-inside:avoid; }
+  /* Las secciones son largas: obligarlas a caber enteras en una hoja
+     dejaba media página en blanco antes de cada salto. Se protegen las
+     tarjetas, que sí deben ir de una pieza. */
+  .sec{ padding-block:1.2rem; }
+  .sec .h2{ break-after:avoid; }
   .acc{ break-inside:avoid; }
   .acc:not([open]) .fl{ display:grid !important; }
   a{ text-decoration:none; }
+
+  /* La aparición al entrar en pantalla depende de que el visitante haya
+     hecho scroll. Al imprimir desde arriba, todo lo que aún no ha entrado
+     saldría en blanco: aquí se muestra siempre. */
+  .reveal,.reveal.is-in{ opacity:1 !important; transform:none !important; }
+
+  /* Las cifras se pintan con un degradado recortado sobre el texto. Sin
+     fondos, el número desaparece: se devuelve a tinta plana. */
+  .stat__n{ background:none !important; -webkit-text-fill-color:var(--warm) !important; color:var(--warm) !important; }
+  .stats__grid{ gap:0; background:transparent; border-inline:0;
+                grid-template-columns:repeat(2,1fr); }
+  .stat{ border:1px solid var(--line); break-inside:avoid; }
+
+  .acr,.card,.qcard{ break-inside:avoid; }
+  .acr::after,.card::after,.qcard::after{ display:none !important; }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════
