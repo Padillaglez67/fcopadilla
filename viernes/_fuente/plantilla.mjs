@@ -60,7 +60,13 @@ export const CENTRO = {
   claim:     'Centro de formación en Santa Cruz de Tenerife',
   dominio:   'https://www.somosviernes.es',
   direccion: 'Calle Celia Cruz, 6 · locales 3 y 4',
+  cp:        '38003',
   ciudad:    'Santa Cruz de Tenerife',
+  /* Coordenadas tomadas de la ficha del centro en Google Maps. */
+  lat:       28.4558029,
+  lon:       -16.2553749,
+  mapaGoogle: 'https://www.google.com/maps/dir//somosviernes,+C.+Celia+Cruz,+6,+Loc+3+y+4,+38003+Santa+Cruz+de+Tenerife/@28.4558029,-16.2553749,17z',
+  mapaOsm:    'https://www.openstreetmap.org/?mlat=28.4558029&mlon=-16.2553749#map=18/28.4558029/-16.2553749',
   telefono:  null,           // ← PENDIENTE: teléfono oficial del centro
   whatsapp:  null,           // ← PENDIENTE: número de WhatsApp, formato 34XXXXXXXXX
   correo:    null,           // ← PENDIENTE: correo oficial del centro
@@ -181,7 +187,7 @@ export const pie = () => `
         <h3>Contacto</h3>
         <address>
           ${CENTRO.direccion}<br>
-          ${CENTRO.ciudad}<br><br>
+          ${CENTRO.cp} ${CENTRO.ciudad}<br><br>
           ${tel()}<br>
           ${mail()}<br><br>
           <span style="color:var(--tinta-3);font-size:var(--t-xs)">${CENTRO.horario}</span>

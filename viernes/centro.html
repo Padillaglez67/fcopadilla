@@ -122,34 +122,22 @@
     </div>
 
     <div class="galeria aparece" style="margin-bottom:2rem">
-      <div class="foto foto--alta">
-          <div class="foto__txt">
-            <svg class="foto__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3l2-2h8l2 2h3v12H3z"/><circle cx="12" cy="13" r="3.5"/></svg>
-            <b>Recepción y zona común</b>
-            <span>Entrada del centro</span>
-          </div>
-        </div>
-      <div class="foto ">
-          <div class="foto__txt">
-            <svg class="foto__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3l2-2h8l2 2h3v12H3z"/><circle cx="12" cy="13" r="3.5"/></svg>
-            <b>Aula de informática</b>
-            <span>Equipos individuales</span>
-          </div>
-        </div>
-      <div class="foto ">
-          <div class="foto__txt">
-            <svg class="foto__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3l2-2h8l2 2h3v12H3z"/><circle cx="12" cy="13" r="3.5"/></svg>
-            <b>Sala de trabajo en grupo</b>
-            <span>Trabajo en equipo</span>
-          </div>
-        </div>
-      <div class="foto ">
-          <div class="foto__txt">
-            <svg class="foto__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3l2-2h8l2 2h3v12H3z"/><circle cx="12" cy="13" r="3.5"/></svg>
-            <b>Zona de descanso</b>
-            <span>Barra alta y taburetes</span>
-          </div>
-        </div>
+      <figure class="marco ">
+          <img src="assets/img/fotos/recepcion.jpg" alt="Recepción del centro: suelo de madera clara, paredes blancas, plantas y una sala de trabajo al fondo con luz natural." loading="lazy" decoding="async">
+          <figcaption>Recepción y zona común</figcaption>
+        </figure>
+      <figure class="marco ">
+          <img src="assets/img/fotos/aula-informatica.jpg" alt="Aula de informática con puestos individuales de ordenador frente a ventanas con vistas." loading="lazy" decoding="async">
+          <figcaption>Aula de informática</figcaption>
+        </figure>
+      <figure class="marco ">
+          <img src="assets/img/fotos/sala-trabajo.jpg" alt="Sala de trabajo en grupo con mesas amplias, sillas de colores y el rótulo «viernes.» en la pared." loading="lazy" decoding="async">
+          <figcaption>Sala de trabajo en grupo</figcaption>
+        </figure>
+      <figure class="marco ">
+          <img src="assets/img/fotos/zona-descanso.jpg" alt="Zona de descanso con una barra alta de madera junto a la pared y taburetes, con lámparas colgantes." loading="lazy" decoding="async">
+          <figcaption>Zona de descanso</figcaption>
+        </figure>
       <div class="foto ">
           <div class="foto__txt">
             <svg class="foto__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3l2-2h8l2 2h3v12H3z"/><circle cx="12" cy="13" r="3.5"/></svg>
@@ -210,31 +198,55 @@
   </div>
 </section>
 
-<section class="sec sec--arena">
+<section class="sec sec--arena" id="llegar">
   <div class="wrap">
     <div class="cabecera aparece">
       <p class="rotulo">Cómo llegar</p>
       <h2>Dónde estamos</h2>
+      <p>En pleno Santa Cruz, en la calle Celia Cruz. Planta accesible y sin escalones en el acceso.</p>
     </div>
+
     <div class="doble">
-      <div class="foto foto--ancha">
+      <div class="situacion">
+        <div class="situacion__mapa">
+          <div class="foto foto--ancha">
           <div class="foto__txt">
             <svg class="foto__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3l2-2h8l2 2h3v12H3z"/><circle cx="12" cy="13" r="3.5"/></svg>
             <b>Cómo llegar</b>
             <span>Pendiente: imagen del plano con enlace al mapa</span>
           </div>
         </div>
+        </div>
+      </div>
+
       <div>
         <h3>viernes. Centro de Formación</h3>
-        <address style="font-style:normal;color:var(--tinta-2);margin-top:.8rem;line-height:1.9">
-          Calle Celia Cruz, 6 · locales 3 y 4<br>
-          Santa Cruz de Tenerife<br><br>
-          <b>Teléfono</b> <span class="pdte" title="Dato pendiente de facilitar por el centro">Teléfono pendiente</span><br>
-          <b>Correo</b> <span class="pdte" title="Dato pendiente de facilitar por el centro">Correo pendiente</span><br><br>
-          <b>Horario</b><br>De lunes a viernes, de 9:00 a 14:00 y de 16:00 a 20:00
+        <address class="direccion">
+          <span class="direccion__pin" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+          </span>
+          <span>
+            <b>Calle Celia Cruz, 6 · locales 3 y 4</b><br>
+            38003 Santa Cruz de Tenerife<br>
+            <span class="coords">28.4558029, -16.2553749</span>
+          </span>
         </address>
-        <p style="margin-top:1.4rem"><a class="btn btn--linea" href="contacto.html">Escribir al centro</a></p>
-        <div class="caja-aviso caja-aviso--sol" style="margin-top:1.4rem">
+
+        <div class="hero__cta" style="margin-top:1.4rem">
+          <a class="btn" href="https://www.google.com/maps/dir//somosviernes,+C.+Celia+Cruz,+6,+Loc+3+y+4,+38003+Santa+Cruz+de+Tenerife/@28.4558029,-16.2553749,17z" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+            Cómo llegar
+          </a>
+          <a class="btn btn--linea" href="https://www.openstreetmap.org/?mlat=28.4558029&mlon=-16.2553749#map=18/28.4558029/-16.2553749" target="_blank" rel="noopener">Ver en OpenStreetMap</a>
+        </div>
+
+        <dl class="datos" style="margin-top:1.6rem">
+          <div><dt>Teléfono</dt><dd><span class="pdte" title="Dato pendiente de facilitar por el centro">Teléfono pendiente</span></dd></div>
+          <div><dt>Correo</dt><dd><span class="pdte" title="Dato pendiente de facilitar por el centro">Correo pendiente</span></dd></div>
+          <div><dt>Horario</dt><dd>De lunes a viernes, de 9:00 a 14:00 y de 16:00 a 20:00</dd></div>
+        </dl>
+
+        <div class="caja-aviso caja-aviso--sol">
           <p><b>Dirección unificada.</b> Esta es la dirección correcta y es la única que
           aparece en toda la web. En el sitio actual convivían dos direcciones distintas:
           corregirlo era urgente.</p>
@@ -295,7 +307,7 @@
         <h3>Contacto</h3>
         <address>
           Calle Celia Cruz, 6 · locales 3 y 4<br>
-          Santa Cruz de Tenerife<br><br>
+          38003 Santa Cruz de Tenerife<br><br>
           <span class="pdte" title="Dato pendiente de facilitar por el centro">Teléfono pendiente</span><br>
           <span class="pdte" title="Dato pendiente de facilitar por el centro">Correo pendiente</span><br><br>
           <span style="color:var(--tinta-3);font-size:var(--t-xs)">De lunes a viernes, de 9:00 a 14:00 y de 16:00 a 20:00</span>

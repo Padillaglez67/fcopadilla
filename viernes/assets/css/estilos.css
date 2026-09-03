@@ -636,13 +636,26 @@ td a:hover{ text-decoration:underline; }
 .razon p{ font-size:var(--t-sm); color:var(--tinta-2); margin:0; }
 
 /* ══════════ GALERÍA DEL ESPACIO ══════════ */
+/* Piezas de tamaño uniforme y contenido, no una composición con una
+   imagen gigante: las fotografías disponibles son de 400 px de ancho y
+   ampliadas pierden nitidez. Cuando lleguen los originales grandes, basta
+   con devolverle a la primera pieza el «grid-column:span 2; grid-row:span 2»
+   para recuperar la composición destacada. */
 .galeria{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
-.galeria > *:first-child{ grid-column:span 2; grid-row:span 2; }
-/* La última pieza rellena el hueco que deja la grande: sin huecos sueltos. */
+.galeria > *{ min-height:0; }
+.galeria .foto, .galeria .marco{ min-height:238px; }
+/* La última pieza rellena el hueco de la fila para no dejar un vacío suelto,
+   salvo que sea un marcador: una foto pendiente no debe ocupar el doble
+   de sitio que las fotografías reales. */
 .galeria > *:last-child{ grid-column:span 2; }
+.galeria > .foto:last-child{ grid-column:auto; }
 @media (max-width: 760px){
   .galeria{ grid-template-columns:1fr 1fr; }
-  .galeria > *:first-child, .galeria > *:last-child{ grid-column:span 2; grid-row:auto; }
+  .galeria > *:last-child{ grid-column:span 2; }
+}
+@media (max-width: 480px){
+  .galeria{ grid-template-columns:1fr; }
+  .galeria > *:last-child{ grid-column:auto; }
 }
 
 /* ══════════ TEMAS DE LAS RESEÑAS ══════════ */
@@ -687,3 +700,17 @@ td a:hover{ text-decoration:underline; }
 
 /* En la galería, la primera pieza manda: ocupa el doble de alto y ancho. */
 .galeria .marco{ height:100%; }
+
+/* ══════════ LOCALIZACIÓN ══════════ */
+.direccion{
+  display:flex; gap:.9rem; align-items:flex-start; font-style:normal;
+  color:var(--tinta-2); line-height:1.7;
+}
+.direccion b{ color:var(--tinta); font-size:var(--t-lg); }
+.direccion__pin{
+  flex:none; width:42px; height:42px; border-radius:50%; display:grid; place-items:center;
+  background:var(--coral-suave);
+}
+.direccion__pin svg{ width:21px; height:21px; fill:none; stroke:var(--coral); stroke-width:1.8; }
+.coords{ font-family:var(--f-cod); font-size:var(--t-xs); color:var(--tinta-3); }
+.situacion__mapa .foto, .situacion__mapa .marco{ min-height:320px; }

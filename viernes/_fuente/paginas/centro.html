@@ -52,7 +52,7 @@ META-->
     </div>
 
     <div class="galeria aparece" style="margin-bottom:2rem">
-      {{FOTO:recepcion:foto--alta}}
+      {{FOTO:recepcion}}
       {{FOTO:informatica}}
       {{FOTO:sala}}
       {{FOTO:descanso}}
@@ -110,25 +110,49 @@ META-->
   </div>
 </section>
 
-<section class="sec sec--arena">
+<section class="sec sec--arena" id="llegar">
   <div class="wrap">
     <div class="cabecera aparece">
       <p class="rotulo">Cómo llegar</p>
       <h2>Dónde estamos</h2>
+      <p>En pleno Santa Cruz, en la calle Celia Cruz. Planta accesible y sin escalones en el acceso.</p>
     </div>
+
     <div class="doble">
-      {{FOTO:mapa:foto--ancha}}
+      <div class="situacion">
+        <div class="situacion__mapa">
+          {{FOTO:mapa:foto--ancha}}
+        </div>
+      </div>
+
       <div>
         <h3>viernes. Centro de Formación</h3>
-        <address style="font-style:normal;color:var(--tinta-2);margin-top:.8rem;line-height:1.9">
-          {{DIRECCION}}<br>
-          {{CIUDAD}}<br><br>
-          <b>Teléfono</b> {{TEL}}<br>
-          <b>Correo</b> {{MAIL}}<br><br>
-          <b>Horario</b><br>{{HORARIO}}
+        <address class="direccion">
+          <span class="direccion__pin" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+          </span>
+          <span>
+            <b>{{DIRECCION}}</b><br>
+            {{CP}} {{CIUDAD}}<br>
+            <span class="coords">{{LAT}}, {{LON}}</span>
+          </span>
         </address>
-        <p style="margin-top:1.4rem"><a class="btn btn--linea" href="contacto.html">Escribir al centro</a></p>
-        <div class="caja-aviso caja-aviso--sol" style="margin-top:1.4rem">
+
+        <div class="hero__cta" style="margin-top:1.4rem">
+          <a class="btn" href="{{MAPA_GOOGLE}}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+            Cómo llegar
+          </a>
+          <a class="btn btn--linea" href="{{MAPA_OSM}}" target="_blank" rel="noopener">Ver en OpenStreetMap</a>
+        </div>
+
+        <dl class="datos" style="margin-top:1.6rem">
+          <div><dt>Teléfono</dt><dd>{{TEL}}</dd></div>
+          <div><dt>Correo</dt><dd>{{MAIL}}</dd></div>
+          <div><dt>Horario</dt><dd>{{HORARIO}}</dd></div>
+        </dl>
+
+        <div class="caja-aviso caja-aviso--sol">
           <p><b>Dirección unificada.</b> Esta es la dirección correcta y es la única que
           aparece en toda la web. En el sitio actual convivían dos direcciones distintas:
           corregirlo era urgente.</p>

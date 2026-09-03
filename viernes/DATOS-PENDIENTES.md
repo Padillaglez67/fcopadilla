@@ -22,8 +22,12 @@ llegue, la web lo muestra como **pendiente**: no se inventa ningún dato.
 
 | Dato | Por qué importa |
 |---|---|
-| **15-20 fotografías reales** del centro y de aulas **en funcionamiento** | Es el mayor activo desaprovechado. Ya hay fotos buenas: recepción, aula de informática, sala de trabajo, zona de barra alta y la pared de pizarra |
-| Fotografía del equipo docente | Genera más confianza que cualquier texto |
+| **Los originales de las cuatro fotos ya colocadas** | Las que hay miden 400 px de ancho. Sirven, pero obligan a mostrarlas pequeñas. Con los originales se puede recuperar la composición con una imagen destacada a gran tamaño |
+| **Foto de la zona infantil** (la pared de pizarra) | Es el mayor diferencial del centro y es la única de las cinco que falta |
+| **Captura o imagen del mapa** (`mapa.png`) | Los botones «Cómo llegar» ya funcionan con las coordenadas reales; falta la imagen del plano |
+| **Más fotografías, con gente trabajando** | Las aulas vacías transmiten menos que una clase en marcha |
+| Fotografía del equipo docente (`equipo.jpg`) | Genera más confianza que cualquier texto |
+| Fotografía de una formación en empresa (`formacion-empresa.jpg`) | Página de empresas |
 | Número de entidad colaboradora del SCE | Bloque de confianza y transparencia |
 | Autorización como agencia de colocación | Sección de la agencia |
 | URL real del campus virtual | Enlace del menú |
