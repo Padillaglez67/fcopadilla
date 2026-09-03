@@ -72,6 +72,28 @@ Se añade el fragmento que da Cloudflare justo antes de `</body>` en
 
 ---
 
+## 4 bis · El mapa · pendiente antes de publicar
+
+La imagen `assets/img/fotos/mapa.png` es **una captura de Google Maps**.
+Para la maqueta y la presentación vale. **Para la web publicada, no**: la
+cartografía de Google tiene licencia y no puede reproducirse como imagen
+propia.
+
+Al publicar hay que sustituirla por una de estas dos vías:
+
+| Vía | Qué implica |
+|---|---|
+| **Google Maps Embed** | Es la forma autorizada de mostrar Google Maps. Carga servicios de Google, así que exige aviso de cookies o un botón de «pulsa para cargar el mapa» |
+| **OpenStreetMap** | Licencia libre con atribución. No pone cookies, no necesita banner. Es la opción coherente con el resto de la web |
+
+Mi recomendación es OpenStreetMap, por coherencia: toda la web está
+construida para no depender de terceros ni necesitar barrera de cookies.
+
+Los enlaces de «Cómo llegar» sí pueden quedarse como están: enlazar a
+Google Maps no tiene ningún problema, es reproducir su mapa lo que sí.
+
+---
+
 ## 5 · Dominio y alojamiento
 
 El centro **ya tiene** `somosviernes.es`. No hay que comprar dominio: hay que

@@ -95,6 +95,11 @@ export const wa = (texto) => CENTRO.whatsapp
   ? `https://wa.me/${CENTRO.whatsapp}?text=${encodeURIComponent(texto || 'Hola, os escribo desde la web.')}`
   : 'contacto.html';
 
+/* La dirección siempre lleva al mapa. Es un enlace, no un efecto al pasar
+   el ratón: así funciona también con el dedo en el móvil y con el teclado,
+   y no depende de que el navegador permita abrir ventanas solo. */
+export const dir = (clase = '') => `<a class="mapa-enlace ${clase}" href="${CENTRO.mapaGoogle}" target="_blank" rel="noopener" title="Ver la ubicación en Google Maps (se abre en una pestaña nueva)">${CENTRO.direccion}<br>${CENTRO.cp} ${CENTRO.ciudad}<span class="mapa-enlace__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></span></a>`;
+
 /* ── Navegación ─────────────────────────────────────────────────────────
    Conserva el vocabulario propio de la marca donde aporta personalidad
    («Así somos», «Flota de profes», «Nuestro espacio») pero reordenado:
@@ -186,8 +191,7 @@ export const pie = () => `
       <div>
         <h3>Contacto</h3>
         <address>
-          ${CENTRO.direccion}<br>
-          ${CENTRO.cp} ${CENTRO.ciudad}<br><br>
+          ${dir()}<br>
           ${tel()}<br>
           ${mail()}<br><br>
           <span style="color:var(--tinta-3);font-size:var(--t-xs)">${CENTRO.horario}</span>

@@ -9,7 +9,7 @@ llegue, la web lo muestra como **pendiente**: no se inventa ningún dato.
 
 | Dato | Para qué | Dónde va |
 |---|---|---|
-| Teléfono oficial | Enlace directo de llamada desde el móvil | `_fuente/plantilla.mjs` |
+| Teléfono oficial | Enlace directo de llamada desde el móvil. En la ficha de Google aparece un número que empieza por 922, pero en la captura no se lee con seguridad y no se transcribe a ciegas | `_fuente/plantilla.mjs` |
 | Correo oficial | Formularios y pie de página | `_fuente/plantilla.mjs` |
 | Número de WhatsApp | Vía de contacto rápida | `_fuente/plantilla.mjs` |
 | Razón social, CIF y datos registrales | Aviso legal | `_fuente/paginas/aviso-legal.html` |
@@ -23,8 +23,7 @@ llegue, la web lo muestra como **pendiente**: no se inventa ningún dato.
 | Dato | Por qué importa |
 |---|---|
 | **Los originales de las cuatro fotos ya colocadas** | Las que hay miden 400 px de ancho. Sirven, pero obligan a mostrarlas pequeñas. Con los originales se puede recuperar la composición con una imagen destacada a gran tamaño |
-| **Foto de la zona infantil** (la pared de pizarra) | Es el mayor diferencial del centro y es la única de las cinco que falta |
-| **Captura o imagen del mapa** (`mapa.png`) | Los botones «Cómo llegar» ya funcionan con las coordenadas reales; falta la imagen del plano |
+| **Sustituir la imagen del mapa** antes de publicar | La actual es una captura de Google Maps: sirve para la maqueta, no para la web publicada. Ver CONFIGURACION.md, apartado 4 bis |
 | **Más fotografías, con gente trabajando** | Las aulas vacías transmiten menos que una clase en marcha |
 | Fotografía del equipo docente (`equipo.jpg`) | Genera más confianza que cualquier texto |
 | Fotografía de una formación en empresa (`formacion-empresa.jpg`) | Página de empresas |

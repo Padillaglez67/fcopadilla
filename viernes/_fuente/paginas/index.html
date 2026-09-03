@@ -332,7 +332,8 @@ META-->
       <a class="btn btn--linea btn--lg" href="contacto.html">Hablar con el centro</a>
     </div>
     <p style="margin-top:1.8rem;font-size:var(--t-sm);color:#93A6B2">
-      {{DIRECCION}} · {{CIUDAD}} &nbsp;·&nbsp; {{TEL}} &nbsp;·&nbsp; {{MAIL}}
+      <a class="mapa-enlace mapa-enlace--claro" href="{{MAPA_GOOGLE}}" target="_blank" rel="noopener">{{DIRECCION}} · {{CIUDAD}}<span class="mapa-enlace__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></span></a>
+      &nbsp;·&nbsp; {{TEL}} &nbsp;·&nbsp; {{MAIL}}
     </p>
   </div>
 </section>

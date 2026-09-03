@@ -13,7 +13,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CURSOS, AREAS, ESTADOS, MODALIDADES } from './cursos.mjs';
-import { CENTRO, pagina, tarjetaCurso, urlCurso, etiEstado, tel, mail, wa, pdte, foto } from './plantilla.mjs';
+import { CENTRO, pagina, tarjetaCurso, urlCurso, etiEstado, tel, mail, wa, pdte, foto, dir } from './plantilla.mjs';
 
 const AQUI  = dirname(fileURLToPath(import.meta.url));
 const RAIZ  = join(AQUI, '..');
@@ -51,6 +51,7 @@ const marcadores = (html) => html
   .replace(/\{\{TEL\}\}/g, tel())
   .replace(/\{\{MAIL\}\}/g, mail())
   .replace(/\{\{WA\}\}/g, wa('Hola, os escribo desde la web. Me gustaría informarme sobre un curso.'))
+  .replace(/\{\{DIR\}\}/g, dir())
   .replace(/\{\{DIRECCION\}\}/g, CENTRO.direccion)
   .replace(/\{\{CIUDAD\}\}/g, CENTRO.ciudad)
   .replace(/\{\{CP\}\}/g, CENTRO.cp)

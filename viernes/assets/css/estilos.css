@@ -714,3 +714,56 @@ td a:hover{ text-decoration:underline; }
 .direccion__pin svg{ width:21px; height:21px; fill:none; stroke:var(--coral); stroke-width:1.8; }
 .coords{ font-family:var(--f-cod); font-size:var(--t-xs); color:var(--tinta-3); }
 .situacion__mapa .foto, .situacion__mapa .marco{ min-height:320px; }
+
+/* ══════════ LA DIRECCIÓN LLEVA AL MAPA ══════════
+   Se comporta como lo que es: un enlace. Al pasar el ratón se ilumina y
+   aparece el pin; al pulsar abre la ubicación en Google Maps. Se activa
+   igual con el teclado y con el dedo, que es lo que un efecto de hover
+   por sí solo no puede hacer. */
+.mapa-enlace{
+  display:inline-block; position:relative;
+  color:var(--tinta-2); text-decoration:none;
+  border-bottom:1px solid transparent; padding-right:1.4rem;
+  transition:color .16s ease, border-color .16s ease;
+}
+.mapa-enlace:hover, .mapa-enlace:focus-visible{
+  color:var(--mar-osc); border-bottom-color:currentColor;
+}
+.mapa-enlace__ico{
+  position:absolute; right:0; bottom:.15em;
+  width:17px; height:17px; opacity:.45;
+  transition:opacity .16s ease, transform .16s ease;
+}
+.mapa-enlace__ico svg{ width:100%; height:100%; fill:none; stroke:currentColor; stroke-width:1.9; }
+.mapa-enlace:hover .mapa-enlace__ico,
+.mapa-enlace:focus-visible .mapa-enlace__ico{ opacity:1; transform:translateY(-2px); color:var(--coral); }
+.mapa-enlace--claro{ color:#B7C6D0; }
+.mapa-enlace--claro:hover, .mapa-enlace--claro:focus-visible{ color:#fff; }
+
+/* La dirección destacada de «Dónde estamos» */
+.direccion .mapa-enlace{ font-size:var(--t-lg); font-weight:600; color:var(--tinta); }
+.direccion .mapa-enlace:hover{ color:var(--mar-osc); }
+
+/* El mapa entero es clicable, y lo dice al pasar por encima. */
+a.situacion__mapa{ display:block; position:relative; text-decoration:none; border-radius:var(--r); }
+a.situacion__mapa .marco img{ transition:transform .4s ease, filter .3s ease; }
+a.situacion__mapa:hover .marco img{ transform:scale(1.04); filter:saturate(1.08); }
+.situacion__lupa{
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) scale(.94);
+  background:var(--coral); color:#fff; font-size:var(--t-sm); font-weight:600;
+  padding:.6rem 1.15rem; border-radius:var(--r-pill); white-space:nowrap;
+  opacity:0; transition:opacity .2s ease, transform .2s ease; pointer-events:none;
+  box-shadow:0 6px 20px rgba(22,35,43,.28);
+}
+a.situacion__mapa:hover .situacion__lupa,
+a.situacion__mapa:focus-visible .situacion__lupa{ opacity:1; transform:translate(-50%,-50%) scale(1); }
+@media (prefers-reduced-motion: reduce){
+  a.situacion__mapa:hover .marco img{ transform:none; }
+  .mapa-enlace:hover .mapa-enlace__ico{ transform:none; }
+}
+
+/* En el bloque destacado ya hay un pin grande a la izquierda: el enlace
+   ocupa su línea completa y las coordenadas caen debajo, no en medio. */
+.direccion .mapa-enlace{ display:block; padding-right:0; }
+.direccion .mapa-enlace__ico{ display:none; }
+.direccion .coords{ display:block; margin-top:.35rem; }

@@ -71,7 +71,7 @@ export const FOTOS = {
   mapa: {
     archivo: 'mapa.png',
     alt: 'Plano de situación del centro en la calle Celia Cruz, 6, en Santa Cruz de Tenerife.',
-    pie: 'Cómo llegar',
+    pie: 'Cómo llegar · imagen © Google Maps',
     nota: 'Pendiente: imagen del plano con enlace al mapa'
   }
 
