@@ -1,0 +1,105 @@
+<!--META
+{
+  "titulo": "Todos los cursos · viernes. Centro de Formación",
+  "desc": "Catálogo completo de cursos en Santa Cruz de Tenerife: certificados de profesionalidad, especialidades formativas, idiomas y formación para empresas. Busca y filtra por estado, área, modalidad y situación laboral.",
+  "activo": "cursos"
+}
+META-->
+
+<section class="ficha" style="padding-block:2.6rem 2rem">
+  <div class="wrap">
+    <p class="migas"><a href="index.html">Inicio</a> › <span>Cursos</span></p>
+    <h1>Cursos</h1>
+    <p class="ficha__lede">
+      {{N_ABIERTOS}} convocatorias abiertas ahora mismo y {{N_CURSOS}} cursos en el catálogo.
+      Filtra por lo que te importa y entra en la ficha: fechas, requisitos y horario, sin rodeos.
+    </p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2.4rem">
+  <div class="wrap" id="catalogo">
+
+    <form class="filtros" role="search" aria-label="Buscar y filtrar cursos" onsubmit="return false">
+      <div class="filtros__fila">
+        <div class="campo">
+          <label for="f-texto">Buscar</label>
+          <input id="f-texto" type="search" placeholder="Almacén, ADGG0208, inglés…" autocomplete="off">
+        </div>
+        <div class="campo">
+          <label for="f-estado">Estado</label>
+          <select id="f-estado">
+            <option value="">Todos</option>
+            <option value="abierto">Inscripción abierta</option>
+            <option value="proximo">Próxima convocatoria</option>
+            <option value="medida">A medida para empresas</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="f-area">Área</label>
+          <select id="f-area">
+            <option value="">Todas</option>
+            <option value="logistica">Logística y almacén</option>
+            <option value="administracion">Administración y gestión</option>
+            <option value="digital">Digital, informática e IA</option>
+            <option value="idiomas">Idiomas</option>
+            <option value="hosteleria">Hostelería y comercio</option>
+            <option value="docencia">Docencia y formación</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="f-modalidad">Modalidad</label>
+          <select id="f-modalidad">
+            <option value="">Todas</option>
+            <option value="presencial">Presencial</option>
+            <option value="virtual">Aula virtual</option>
+            <option value="teleformacion">Teleformación</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filtros__fila" style="grid-template-columns:1fr;margin-top:.85rem">
+        <div class="campo">
+          <label for="f-para">Tu situación laboral</label>
+          <select id="f-para">
+            <option value="">Cualquiera</option>
+            <option value="desempleada">Estoy en desempleo</option>
+            <option value="ocupada">Estoy trabajando</option>
+            <option value="autonoma">Soy autónoma o autónomo</option>
+            <option value="estudiante">Estudio o busco mi primer empleo</option>
+          </select>
+          <span class="ayuda">Muchas convocatorias reservan las plazas a un perfil concreto. Esto te ahorra mirar cursos a los que no podrías acceder.</span>
+        </div>
+      </div>
+
+      <div class="filtros__pie">
+        <p class="filtros__n" id="n-resultados" role="status" aria-live="polite"><b>{{N_CURSOS}}</b> cursos encontrados</p>
+        <button type="button" class="enlace-btn" id="limpiar-filtros">Quitar todos los filtros</button>
+        <a class="btn btn--sm btn--linea" href="comprobar-requisitos.html" style="margin-left:auto">¿No sabes cuál te encaja? Pruébalo aquí</a>
+      </div>
+    </form>
+
+    <div class="rejilla rejilla--3">
+      {{CURSOS_GRID}}
+    </div>
+
+    <div class="vacio" id="sin-resultados" hidden>
+      <h2 style="font-size:var(--t-h4)">No hay ningún curso con esos filtros</h2>
+      <p style="color:var(--tinta-2)">Prueba a quitar alguno, o déjanos tus datos y te avisamos
+      en cuanto salga una convocatoria de lo que buscas.</p>
+      <a class="btn btn--linea" href="contacto.html">Avisadme cuando haya algo</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="cierre">
+  <div class="wrap">
+    <h2>¿Sigues con dudas?</h2>
+    <p>Cinco preguntas y te decimos a qué puedes acceder. Sin registrarte y sin que quede constancia de nada.</p>
+    <div class="cierre__cta">
+      <a class="btn btn--lg" href="comprobar-requisitos.html">Comprobar mis requisitos</a>
+      <a class="btn btn--linea btn--lg" href="contacto.html">Preguntar al centro</a>
+    </div>
+  </div>
+</section>

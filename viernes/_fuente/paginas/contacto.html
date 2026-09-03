@@ -1,0 +1,117 @@
+<!--META
+{
+  "titulo": "Contacta con el centro · viernes. Centro de Formación",
+  "desc": "Teléfono, correo, dirección y horario de viernes. Centro de Formación en Santa Cruz de Tenerife. Calle Celia Cruz, 6, locales 3 y 4.",
+  "activo": "contacto",
+  "centro": true
+}
+META-->
+
+<section class="ficha" style="padding-block:2.6rem 2rem">
+  <div class="wrap">
+    <p class="migas"><a href="index.html">Inicio</a> › <span>Contacta</span></p>
+    <h1>Hablemos</h1>
+    <p class="ficha__lede">
+      Llama, escribe o pásate por el centro. Preguntar no compromete a nada y
+      resolvemos en cinco minutos dudas que por escrito llevan tres correos.
+    </p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2.4rem">
+  <div class="wrap">
+    <div class="rejilla rejilla--3" style="margin-bottom:2.4rem">
+      <article class="razon">
+        <div class="razon__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.1a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></div>
+        <h3>Teléfono</h3>
+        <p>{{TEL}}<br><span style="color:var(--tinta-3)">{{HORARIO}}</span></p>
+      </article>
+      <article class="razon">
+        <div class="razon__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
+        <h3>Correo</h3>
+        <p>{{MAIL}}<br><span style="color:var(--tinta-3)">Contestamos en menos de 48 horas laborables</span></p>
+      </article>
+      <article class="razon">
+        <div class="razon__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
+        <h3>En el centro</h3>
+        <p>{{DIRECCION}}<br>{{CIUDAD}}</p>
+      </article>
+    </div>
+
+    <div class="doble" style="align-items:start">
+      <div>
+        <h2 style="margin-bottom:1.2rem">Escríbenos</h2>
+        <form class="form" id="form-solicitud" novalidate>
+          <input type="hidden" name="access_key" value="PEGAR-CLAVE-WEB3FORMS-DEL-CENTRO">
+          <input type="hidden" name="subject" value="Consulta desde la web de viernes.">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+          <div class="campo campo--req">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" required autocomplete="name">
+          </div>
+
+          <div class="form__fila">
+            <div class="campo campo--req">
+              <label for="f-email">Correo electrónico</label>
+              <input id="f-email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="campo">
+              <label for="f-tel">Teléfono <span style="font-weight:400;color:var(--tinta-3)">(opcional)</span></label>
+              <input id="f-tel" name="telefono" type="tel" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="campo campo--req">
+            <label for="f-curso">Motivo de la consulta</label>
+            <select id="f-curso" name="curso" required>
+              <option value="">Elige una opción…</option>
+              <option>Información sobre un curso</option>
+              <option>Requisitos de acceso</option>
+              <option>Formación para mi empresa</option>
+              <option>Agencia de colocación · busco empleo</option>
+              <option>Agencia de colocación · busco personal</option>
+              <option>Quiero dar clase en el centro</option>
+              <option>Sugerencia o reclamación</option>
+              <option>Otro asunto</option>
+            </select>
+          </div>
+
+          <div class="campo campo--req">
+            <label for="f-mensaje">Cuéntanos</label>
+            <textarea id="f-mensaje" name="mensaje" required></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="consentimiento" required>
+            <span>He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</span>
+          </label>
+
+          <p class="aviso-form" id="form-msg" role="status" aria-live="polite" hidden></p>
+          <button class="btn btn--lg" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <aside>
+        <div class="panel">
+          <h2>Atajos</h2>
+          <a class="btn btn--linea" href="cursos.html?estado=abierto">Ver cursos abiertos</a>
+          <a class="btn btn--linea" href="comprobar-requisitos.html">Comprobar requisitos</a>
+          <a class="btn btn--linea" href="inscripcion.html">Solicitar plaza</a>
+          <a class="btn btn--linea" href="{{CAMPUS}}" target="_blank" rel="noopener">Entrar al campus</a>
+          <p class="panel__nota">También estamos en
+            <a href="{{INSTAGRAM}}" target="_blank" rel="noopener">Instagram</a>,
+            <a href="{{FACEBOOK}}" target="_blank" rel="noopener">Facebook</a> y
+            <a href="{{TIKTOK}}" target="_blank" rel="noopener">TikTok</a>.
+          </p>
+        </div>
+
+        <div class="caja-aviso" style="margin-top:1rem">
+          <p><b>Sugerencias y reclamaciones.</b> Si algo no ha ido como esperabas,
+          este mismo formulario sirve. Elige «Sugerencia o reclamación» y llegará
+          a la dirección del centro.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

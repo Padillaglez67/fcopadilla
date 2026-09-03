@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="viernes.">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7FC4E8"/>
+      <stop offset="1" stop-color="#BFE0F2"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#cielo)"/>
+  <path d="M14 18h9.6l8.4 22.4L40.4 18H50L36.6 52h-9.2z" fill="#fff"/>
+  <circle cx="52" cy="47" r="5.6" fill="#fff"/>
+</svg>

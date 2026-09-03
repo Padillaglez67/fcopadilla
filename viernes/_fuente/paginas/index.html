@@ -1,0 +1,364 @@
+<!--META
+{
+  "titulo": "viernes. · Centro de Formación en Santa Cruz de Tenerife",
+  "desc": "Cursos gratuitos, certificados de profesionalidad, idiomas y formación para empresas en Santa Cruz de Tenerife. Entidad colaboradora del Servicio Canario de Empleo desde 2014. Mira los cursos abiertos y comprueba si cumples los requisitos.",
+  "activo": "",
+  "centro": true
+}
+META-->
+
+<!-- ══════════ 1 · PORTADA ══════════ -->
+<section class="hero">
+  <div class="wrap hero__in">
+
+    <div>
+      <ul class="dias" aria-hidden="true">
+        <li>L</li><li>M</li><li>X</li><li>J</li><li class="hoy">V</li><li>S</li><li>D</li>
+        <span class="dias__txt">el día en que empiezan las cosas</span>
+      </ul>
+
+      <h1>Formación que abre<br>oportunidades <em>reales</em><br>en Tenerife<i>.</i></h1>
+
+      <p class="hero__lede">
+        Cursos gratuitos, certificados de profesionalidad, idiomas y formación
+        para empresas. Con acompañamiento de verdad, de la primera llamada
+        hasta el primer contrato.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn btn--lg" href="cursos.html?estado=abierto">Ver cursos abiertos</a>
+        <a class="btn btn--linea btn--lg" href="comprobar-requisitos.html">Comprobar si cumplo los requisitos</a>
+      </div>
+
+      <div class="hero__datos">
+        <div class="dato"><b>{{GOOGLE_NOTA}}<i>★</i></b><span>en Google, con {{GOOGLE_RESENAS}} reseñas</span></div>
+        <div class="dato"><b>{{SCE_DESDE}}</b><span>entidad colaboradora del SCE</span></div>
+        <div class="dato"><b>{{N_ABIERTOS}}</b><span>convocatorias abiertas ahora</span></div>
+      </div>
+    </div>
+
+    <div class="buscador">
+      <h2>¿Qué quieres aprender?</h2>
+      <form id="form-buscar" action="cursos.html" method="get" role="search">
+        <div class="buscador__campo">
+          <label class="sr" for="q-portada">Buscar un curso por nombre, código o materia</label>
+          <input id="q-portada" name="q" type="search" placeholder="Almacén, administración, inglés, IA…" autocomplete="off">
+          <button class="btn" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            Buscar
+          </button>
+        </div>
+      </form>
+      <p style="font-size:var(--t-xs);color:var(--tinta-3);margin:.9rem 0 .4rem">O entra directamente por área:</p>
+      <div class="buscador__rapido">
+        <a class="chip" href="cursos.html?area=logistica">Logística y almacén</a>
+        <a class="chip" href="cursos.html?area=administracion">Administración</a>
+        <a class="chip" href="cursos.html?area=digital">Digital e IA</a>
+        <a class="chip" href="cursos.html?area=idiomas">Idiomas</a>
+        <a class="chip" href="cursos.html?area=hosteleria">Hostelería y comercio</a>
+        <a class="chip" href="cursos.html?area=docencia">Docencia</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ 2 · CURSOS ABIERTOS ══════════ -->
+<section class="sec sec--blanco" id="abiertos">
+  <div class="wrap">
+    <div class="cabecera aparece">
+      <p class="rotulo">Puedes apuntarte hoy</p>
+      <h2>Cursos con la inscripción abierta</h2>
+      <p>Estas convocatorias admiten solicitudes ahora mismo. Cada una tiene su ficha,
+      con requisitos, fechas y horario claros, sin letra pequeña.</p>
+    </div>
+
+    <div class="rejilla rejilla--3 aparece">
+      {{CURSOS_ABIERTOS}}
+    </div>
+
+    <p style="margin-top:2rem">
+      <a class="btn btn--linea" href="cursos.html">Ver los {{N_CURSOS}} cursos del catálogo</a>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ 3 · POR QUÉ VIERNES ══════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="cabecera cabecera--centro aparece">
+      <p class="rotulo" style="justify-content:center">Por qué aquí</p>
+      <h2>Formarse acompañado cambia el resultado</h2>
+      <p>No damos clases y ya está. Te acompañamos desde que preguntas hasta que
+      encuentras trabajo, y si algo se tuerce por el camino, lo hablamos.</p>
+    </div>
+
+    <div class="rejilla rejilla--4 aparece">
+      <article class="razon">
+        <div class="razon__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/></svg></div>
+        <h3>Grupos pequeños</h3>
+        <p>Aulas de hasta 20 personas. Aquí nadie es un número de expediente ni se queda atrás sin que nos demos cuenta.</p>
+      </article>
+      <article class="razon">
+        <div class="razon__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6 6.5 1-4.7 4.6 1.1 6.4L12 17l-5.9 3 1.1-6.4L2.5 9 9 8z"/></svg></div>
+        <h3>Tutoría desde el primer día</h3>
+        <p>Una persona de referencia que sigue tu progreso, te avisa si faltas y te ayuda cuando el ritmo aprieta.</p>
+      </article>
+      <article class="razon">
+        <div class="razon__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7h-3V5a2 2 0 00-2-2H9a2 2 0 00-2 2v2H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M9 7V5h6v2"/></svg></div>
+        <h3>Prácticas en empresa</h3>
+        <p>Buscamos nosotros el centro de trabajo y hacemos el seguimiento. No te mandamos a buscarlo por tu cuenta.</p>
+      </article>
+      <article class="razon">
+        <div class="razon__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.1V12a10 10 0 11-5.9-9.1"/><path d="M22 4L12 14l-3-3"/></svg></div>
+        <h3>Agencia de colocación propia</h3>
+        <p>Al terminar no se acaba la relación: trabajamos contigo la búsqueda de empleo y te presentamos a empresas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 4 · OPINIONES ══════════ -->
+<section class="sec sec--arena">
+  <div class="wrap">
+    <div class="doble aparece">
+      <div>
+        <p class="rotulo">Lo que dicen quienes ya han pasado</p>
+        <h2>Nuestra mejor carta de presentación no la escribimos nosotros</h2>
+        <p style="color:var(--tinta-2);margin-top:1rem">
+          La valoración media en Google es de <b>{{GOOGLE_NOTA}} sobre 5</b>, con {{GOOGLE_RESENAS}} reseñas
+          públicas. Estos son los temas que más se repiten en ellas.
+        </p>
+        <ul class="temas">
+          <li><b>Instalaciones</b> modernas y limpias</li>
+          <li><b>Ambiente</b> agradable y familiar</li>
+          <li><b>Profesorado</b> preparado</li>
+          <li><b>Atención</b> cercana</li>
+          <li><b>Metodología</b> práctica</li>
+          <li>Inscripción <b>sencilla</b></li>
+        </ul>
+        <p style="margin-top:1.6rem">
+          <a class="btn btn--linea" href="opiniones.html">Ver opiniones y resultados</a>
+        </p>
+      </div>
+
+      <div>
+        <div class="nota-google">
+          <div>
+            <p class="nota-google__n">{{GOOGLE_NOTA}}</p>
+            <div class="estrellas" role="img" aria-label="4,8 de 5 estrellas">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.5 7 1-5 4.9 1.2 7L12 18l-6.2 3.4L7 14.4 2 9.5l7-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.5 7 1-5 4.9 1.2 7L12 18l-6.2 3.4L7 14.4 2 9.5l7-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.5 7 1-5 4.9 1.2 7L12 18l-6.2 3.4L7 14.4 2 9.5l7-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.5 7 1-5 4.9 1.2 7L12 18l-6.2 3.4L7 14.4 2 9.5l7-1z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.5 7 1-5 4.9 1.2 7L12 18l-6.2 3.4L7 14.4 2 9.5l7-1z"/></svg>
+            </div>
+            <p class="nota-google__t">{{GOOGLE_RESENAS}} reseñas en Google</p>
+          </div>
+        </div>
+        <div class="caja-aviso" style="margin-top:1rem">
+          <p><b>Testimonios pendientes.</b> Este bloque está preparado para mostrar opiniones
+          recientes, fechadas y vinculadas a un curso concreto. Se rellenará con reseñas
+          reales del alumnado, con su autorización.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 5 · EL ESPACIO ══════════ -->
+<section class="sec sec--blanco" id="espacio">
+  <div class="wrap">
+    <div class="cabecera aparece">
+      <p class="rotulo">Nuestro espacio</p>
+      <h2>Un centro luminoso, accesible y con sitio para todos</h2>
+      <p>Aulas equipadas, zona de descanso con barra alta y hasta una pared de pizarra
+      para que quien viene con menores a cargo pueda formarse tranquilo.</p>
+    </div>
+
+    <div class="galeria aparece">
+      <div class="foto foto--alta">
+        <div class="foto__txt">
+          <svg class="foto__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3l2-2h8l2 2h3v12H3z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <b>Recepción y zona común</b>
+          <span>Fotografía real disponible · pendiente de incorporar</span>
+        </div>
+      </div>
+      <div class="foto">
+        <div class="foto__txt">
+          <b>Aula de informática</b>
+          <span>Fotografía real disponible</span>
+        </div>
+      </div>
+      <div class="foto">
+        <div class="foto__txt">
+          <b>Sala de trabajo en grupo</b>
+          <span>Fotografía real disponible</span>
+        </div>
+      </div>
+      <div class="foto">
+        <div class="foto__txt">
+          <b>Zona de descanso</b>
+          <span>Barra alta y taburetes</span>
+        </div>
+      </div>
+      <div class="foto">
+        <div class="foto__txt">
+          <b>Pared de pizarra</b>
+          <span>Zona para menores</span>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:2rem">
+      <a class="btn btn--linea" href="centro.html">Conocer el centro por dentro</a>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ 6 · CÓMO SE ENTRA ══════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="cabecera aparece">
+      <p class="rotulo">Sin laberintos</p>
+      <h2>Cómo funciona la inscripción</h2>
+      <p>Tres pasos. Y en el primero solo te pedimos lo imprescindible para poder informarte.</p>
+    </div>
+
+    <ol class="pasos aparece">
+      <li>
+        <h3>Nos dices qué te interesa</h3>
+        <p>Nombre, teléfono, correo y el curso. Nada más. Con eso ya podemos comprobar
+        si encajas y contarte lo que necesitas saber.</p>
+      </li>
+      <li>
+        <h3>Hablamos y comprobamos requisitos</h3>
+        <p>Te llamamos o vienes al centro. Revisamos tu situación y te decimos con
+        claridad si puedes acceder y por qué vía.</p>
+      </li>
+      <li>
+        <h3>Formalizas la matrícula</h3>
+        <p>Solo entonces se piden los documentos que exige la administración,
+        explicándote para qué sirve cada uno.</p>
+      </li>
+    </ol>
+
+    <div class="caja-aviso" style="margin-top:2rem">
+      <p><b>¿No sabes si cumples los requisitos?</b> Es la pregunta que más nos hacen.
+      Hemos hecho un comprobador de cinco preguntas que te lo dice al momento,
+      sin registrarte ni dejar ningún dato.
+      <a href="comprobar-requisitos.html">Probar el comprobador</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 7 · EMPRESAS Y EMPLEO ══════════ -->
+<section class="sec sec--arena">
+  <div class="wrap">
+    <div class="rejilla rejilla--2 aparece">
+      <article class="tarjeta" style="padding:2rem">
+        <p class="rotulo">Para empresas</p>
+        <h3 style="font-size:var(--t-h3)">Formación a medida, bonificable y sin papeleo para ti</h3>
+        <p style="color:var(--tinta-2)">Diseñamos la acción formativa según lo que necesita tu plantilla,
+        la impartimos en el centro o en tus instalaciones y nos ocupamos de la gestión
+        de la bonificación.</p>
+        <a class="btn btn--mar" href="empresas.html">Ver formación para empresas</a>
+      </article>
+
+      <article class="tarjeta" style="padding:2rem">
+        <p class="rotulo">Agencia de colocación</p>
+        <h3 style="font-size:var(--t-h3)">Formamos, pero sobre todo queremos que trabajes</h3>
+        <p style="color:var(--tinta-2)">Somos agencia de colocación autorizada. Trabajamos la orientación,
+        el currículum y la entrevista, y ponemos en contacto a las personas
+        con las empresas que buscan perfiles como el suyo.</p>
+        <a class="btn btn--mar" href="agencia-colocacion.html">Cómo funciona la agencia</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 8 · CALENDARIO ══════════ -->
+<section class="sec sec--blanco">
+  <div class="wrap">
+    <div class="cabecera aparece">
+      <p class="rotulo">Agenda</p>
+      <h2>Próximas convocatorias</h2>
+      <p>Lo que está abierto y lo que viene. Si algo te interesa y aún no ha salido,
+      déjanos tus datos y te avisamos el primer día.</p>
+    </div>
+
+    <div class="tabla-env aparece">
+      <table>
+        <caption>Convocatorias abiertas y previstas. Las fechas de las previstas pueden variar.</caption>
+        <thead>
+          <tr><th scope="col">Curso</th><th scope="col">Inicio</th><th scope="col">Modalidad</th><th scope="col">Estado</th></tr>
+        </thead>
+        <tbody>{{CALENDARIO}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 9 · PREGUNTAS FRECUENTES ══════════ -->
+<section class="sec">
+  <div class="wrap wrap--txt">
+    <div class="cabecera aparece">
+      <p class="rotulo">Dudas habituales</p>
+      <h2>Preguntas frecuentes</h2>
+    </div>
+
+    <div class="faq aparece">
+      <details>
+        <summary>¿Los cursos son gratuitos?</summary>
+        <div><p>Muchos sí. Las acciones formativas financiadas con fondos públicos no tienen coste
+        para el alumnado que cumple los requisitos. En cada ficha de curso lo indicamos
+        con claridad, junto con la financiación que le corresponde.</p></div>
+      </details>
+      <details>
+        <summary>¿Puedo hacer un curso si estoy trabajando?</summary>
+        <div><p>Sí. Hay convocatorias para personas ocupadas, y otras en horario de tarde
+        o en aula virtual precisamente para que sean compatibles. Puedes filtrar por
+        tu situación en el <a href="cursos.html">catálogo</a>.</p></div>
+      </details>
+      <details>
+        <summary>No tengo la ESO. ¿Puedo acceder a algo?</summary>
+        <div><p>Sí. Los certificados de nivel 1 no exigen titulación, y para los de nivel 2 y 3
+        existen pruebas de acceso y de competencias clave. Llámanos: casi siempre hay una vía.</p></div>
+      </details>
+      <details>
+        <summary>¿Qué es un certificado de profesionalidad?</summary>
+        <div><p>Es un título oficial que acredita que sabes desempeñar una profesión concreta.
+        Lo expide la administración, tiene validez en toda España y en muchos sectores es
+        lo que te piden para poder trabajar.</p></div>
+      </details>
+      <details>
+        <summary>¿Hacéis las prácticas en empresa o las tengo que buscar yo?</summary>
+        <div><p>Las buscamos nosotros. Tenemos convenios con empresas de la isla y asignamos
+        un tutor del centro que hace el seguimiento durante toda la estancia.</p></div>
+      </details>
+      <details>
+        <summary>Voy con mi hijo o mi hija. ¿Hay algún problema?</summary>
+        <div><p>Hablémoslo. El centro tiene una zona con pared de pizarra pensada para esas
+        situaciones. No podemos ofrecer un servicio de guardería, pero sí buscar la manera
+        de que la conciliación no te deje fuera de un curso.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 10 · CIERRE ══════════ -->
+<section class="cierre">
+  <div class="wrap">
+    <h2>Empieza un viernes cualquiera<i style="color:var(--coral-claro);font-style:normal">.</i></h2>
+    <p>Cuéntanos qué buscas y te decimos con franqueza si tenemos algo para ti.
+    Y si no lo tenemos, te decimos dónde mirar.</p>
+    <div class="cierre__cta">
+      <a class="btn btn--lg" href="inscripcion.html">Solicitar plaza</a>
+      <a class="btn btn--linea btn--lg" href="contacto.html">Hablar con el centro</a>
+    </div>
+    <p style="margin-top:1.8rem;font-size:var(--t-sm);color:#93A6B2">
+      {{DIRECCION}} · {{CIUDAD}} &nbsp;·&nbsp; {{TEL}} &nbsp;·&nbsp; {{MAIL}}
+    </p>
+  </div>
+</section>

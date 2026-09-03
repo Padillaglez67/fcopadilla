@@ -1,0 +1,110 @@
+<!--META
+{
+  "titulo": "Solicitar plaza · viernes. Centro de Formación",
+  "desc": "Solicita plaza en un curso de viernes. Centro de Formación. Primer paso rápido: solo nombre, teléfono, correo y el curso que te interesa.",
+  "activo": "cursos"
+}
+META-->
+
+<section class="ficha" style="padding-block:2.6rem 2rem">
+  <div class="wrap">
+    <p class="migas"><a href="index.html">Inicio</a> › <span>Solicitar plaza</span></p>
+    <h1>Solicitar plaza</h1>
+    <p class="ficha__lede">
+      Este primer paso es corto a propósito: solo lo imprescindible para poder
+      informarte. Los documentos que exige la administración se piden después,
+      cuando ya sepas que te interesa y sepamos que puedes acceder.
+    </p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:2.4rem">
+  <div class="wrap doble" style="align-items:start">
+
+    <div>
+      <form class="form" id="form-solicitud" novalidate>
+        <!-- Web3Forms · la clave del centro se pega aquí. Ver CONFIGURACION.md -->
+        <input type="hidden" name="access_key" value="PEGAR-CLAVE-WEB3FORMS-DEL-CENTRO">
+        <input type="hidden" name="subject" value="Nueva solicitud de plaza desde la web">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+        <div class="campo campo--req">
+          <label for="f-nombre">Nombre y apellidos</label>
+          <input id="f-nombre" name="nombre" type="text" required autocomplete="name">
+        </div>
+
+        <div class="form__fila">
+          <div class="campo campo--req">
+            <label for="f-tel">Teléfono</label>
+            <input id="f-tel" name="telefono" type="tel" required autocomplete="tel">
+            <span class="ayuda">Es la vía más rápida: solemos llamar en menos de 48 horas.</span>
+          </div>
+          <div class="campo campo--req">
+            <label for="f-email">Correo electrónico</label>
+            <input id="f-email" name="email" type="email" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="campo campo--req">
+          <label for="f-curso">Curso que te interesa</label>
+          <select id="f-curso" name="curso" required>
+            <option value="">Elige un curso…</option>
+{{CURSOS_OPCIONES}}
+            <option value="otro">Aún no lo sé / quiero que me orienten</option>
+          </select>
+        </div>
+
+        <div class="campo campo--req">
+          <label for="f-situacion">Situación laboral</label>
+          <select id="f-situacion" name="situacion" required>
+            <option value="">Elige una opción…</option>
+            <option>En desempleo</option>
+            <option>Trabajando por cuenta ajena</option>
+            <option>Autónoma o autónomo</option>
+            <option>Estudiando o buscando mi primer empleo</option>
+          </select>
+          <span class="ayuda">Lo necesitamos porque muchas convocatorias reservan las plazas a un perfil concreto.</span>
+        </div>
+
+        <div class="campo">
+          <label for="f-mensaje">¿Quieres contarnos algo más? <span style="font-weight:400;color:var(--tinta-3)">(opcional)</span></label>
+          <textarea id="f-mensaje" name="mensaje" placeholder="Horarios que te vienen bien, dudas sobre requisitos, si necesitas alguna adaptación…"></textarea>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" name="consentimiento" required>
+          <span>He leído y acepto la <a href="privacidad.html">política de privacidad</a>.
+          Autorizo que el centro use estos datos para contactar conmigo e informarme
+          sobre este curso.</span>
+        </label>
+
+        <p class="aviso-form" id="form-msg" role="status" aria-live="polite" hidden></p>
+
+        <button class="btn btn--lg" type="submit">Enviar solicitud</button>
+        <p style="font-size:var(--t-xs);color:var(--tinta-3);margin:0">
+          Los campos marcados con * son obligatorios.
+        </p>
+      </form>
+    </div>
+
+    <aside>
+      <div class="panel">
+        <h2>Qué pasa después</h2>
+        <ol class="modulos" style="counter-reset:mod">
+          <li><b>Te llamamos</b>En menos de 48 horas laborables, al teléfono que nos dejes.</li>
+          <li><b>Comprobamos requisitos</b>Con tu situación concreta delante, y te decimos claramente si puedes acceder.</li>
+          <li><b>Formalizas la matrícula</b>Solo entonces se piden los documentos oficiales, explicándote para qué sirve cada uno.</li>
+        </ol>
+        <p class="panel__nota">¿Prefieres hablar antes? Llámanos al {{TEL}} o escríbenos a {{MAIL}}.</p>
+      </div>
+
+      <div class="caja-aviso" style="margin-top:1rem">
+        <p><b>Por qué no te pedimos el DNI todavía.</b> Para informarte no hace falta.
+        Pedir el documento de identidad, la fecha de nacimiento o datos de salud en
+        el primer contacto es pedir de más. Se solicitan cuando hay una matrícula
+        real que tramitar, y se explica para qué sirve cada dato.</p>
+      </div>
+    </aside>
+
+  </div>
+</section>
