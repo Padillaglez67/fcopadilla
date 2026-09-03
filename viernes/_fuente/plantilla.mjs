@@ -5,7 +5,40 @@
    pasar lo de las dos direcciones distintas conviviendo en la web.
    ═══════════════════════════════════════════════════════════════════════ */
 
+import { existsSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { AREAS, ESTADOS, MODALIDADES } from './cursos.mjs';
+import { FOTOS } from './fotos.mjs';
+
+const RAIZ_SITIO = join(dirname(fileURLToPath(import.meta.url)), '..');
+
+/* ── Fotografía o marcador ──────────────────────────────────────────────
+   Si el archivo está en assets/img/fotos/, se coloca la imagen. Si no,
+   se coloca un marcador que se ve deliberado y dice qué falta. La web
+   nunca queda con un hueco roto ni con una imagen inventada.
+   `clase` permite alargar el hueco (foto--alta, foto--ancha).       */
+export const foto = (clave, clase = '') => {
+  const f = FOTOS[clave];
+  if (!f) throw new Error('Fotografía no definida: ' + clave);
+
+  const ruta = 'assets/img/fotos/' + f.archivo;
+
+  if (existsSync(join(RAIZ_SITIO, ruta))) {
+    return `<figure class="marco ${clase}">
+          <img src="${ruta}" alt="${f.alt.replace(/"/g, '&quot;')}" loading="lazy" decoding="async">
+          <figcaption>${f.pie}</figcaption>
+        </figure>`;
+  }
+
+  return `<div class="foto ${clase}">
+          <div class="foto__txt">
+            <svg class="foto__ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h3l2-2h8l2 2h3v12H3z"/><circle cx="12" cy="13" r="3.5"/></svg>
+            <b>${f.pie}</b>
+            <span>${f.nota}</span>
+          </div>
+        </div>`;
+};
 
 /* ── Interruptor de maqueta ─────────────────────────────────────────────
    Mientras valga true, la web se identifica como maqueta: muestra el aviso

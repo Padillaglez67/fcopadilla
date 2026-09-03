@@ -1,0 +1,26 @@
+FOTOGRAFIAS DEL CENTRO
+======================
+
+Copia aqui las fotos con EXACTAMENTE estos nombres y la web las coloca
+sola en su sitio, con su pie de foto y su texto alternativo:
+
+   recepcion.jpg .......... recepcion y zona comun
+   aula-informatica.jpg ... aula de informatica
+   sala-trabajo.jpg ....... sala de trabajo en grupo
+   zona-descanso.jpg ...... barra alta y taburetes
+   zona-infantil.jpg ...... pared de pizarra
+   equipo.jpg ............. el equipo docente
+   formacion-empresa.jpg .. una sesion de formacion en empresa
+   mapa.png ............... plano de situacion
+
+Despues hay que regenerar el sitio:   node _fuente/generar.mjs
+
+Mientras un archivo no exista, esa pieza muestra un marcador que indica
+que falta. La web nunca queda rota ni con una imagen inventada.
+
+RECOMENDACIONES
+---------------
+  · Horizontales, minimo 1600 px de ancho
+  · Con gente trabajando mejor que aulas vacias
+  · JPG de calidad media-alta: por debajo de 400 KB cada una
+  · Con autorizacion de las personas que aparezcan

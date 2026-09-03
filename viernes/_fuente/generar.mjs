@@ -13,7 +13,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CURSOS, AREAS, ESTADOS, MODALIDADES } from './cursos.mjs';
-import { CENTRO, pagina, tarjetaCurso, urlCurso, etiEstado, tel, mail, wa, pdte } from './plantilla.mjs';
+import { CENTRO, pagina, tarjetaCurso, urlCurso, etiEstado, tel, mail, wa, pdte, foto } from './plantilla.mjs';
 
 const AQUI  = dirname(fileURLToPath(import.meta.url));
 const RAIZ  = join(AQUI, '..');
@@ -61,7 +61,8 @@ const marcadores = (html) => html
   .replace(/\{\{GOOGLE_NOTA\}\}/g, CENTRO.googleNota)
   .replace(/\{\{GOOGLE_RESENAS\}\}/g, CENTRO.googleResenas)
   .replace(/\{\{SCE_DESDE\}\}/g, CENTRO.sceDesde)
-  .replace(/\{\{PDTE:([^}]+)\}\}/g, (_, q) => pdte(q));
+  .replace(/\{\{PDTE:([^}]+)\}\}/g, (_, q) => pdte(q))
+  .replace(/\{\{FOTO:([a-z]+)(?::([a-z0-9 -]+))?\}\}/g, (_, clave, clase) => foto(clave, clase || ''));
 
 /* ── Datos estructurados del centro ──────────────────────────────────── */
 const jsonldCentro = `<script type="application/ld+json">
