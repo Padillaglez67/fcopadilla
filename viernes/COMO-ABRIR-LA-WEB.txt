@@ -1,0 +1,40 @@
+=======================================================
+  viernes. Centro de Formacion  ·  MAQUETA DE LA WEB
+=======================================================
+
+  IMPORTANTE: NO abras index.html desde dentro del ZIP.
+
+  Si lo haces, Windows saca solo ese archivo a una carpeta
+  temporal y deja atras la carpeta "assets", que es donde
+  estan los estilos y las tipografias. La web se ve
+  entonces como texto suelto, sin diseno.
+
+
+  PASOS CORRECTOS
+  ---------------
+
+  1. Clic derecho sobre el archivo ZIP
+  2. "Extraer todo..."  y confirmar
+  3. Entrar en la carpeta "viernes" que aparece
+  4. Doble clic en  index.html
+
+
+  PARA LLEVARLA EN UN PENDRIVE
+  ----------------------------
+
+  Copia la carpeta "viernes" ENTERA, con todo lo que hay
+  dentro. Si copias solo el index.html pasara lo mismo.
+
+  Una vez copiada funciona en cualquier ordenador, sin
+  internet y sin instalar nada.
+
+
+  QUE HAY DENTRO
+  --------------
+
+  index.html ............ empieza por aqui
+  LEEME.md .............. que incluye y como se mantiene
+  CONFIGURACION.md ...... donde va cada clave tecnica
+  DATOS-PENDIENTES.md ... que hace falta pedir al centro
+
+=======================================================
