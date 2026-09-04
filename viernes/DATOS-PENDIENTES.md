@@ -9,9 +9,8 @@ llegue, la web lo muestra como **pendiente**: no se inventa ningún dato.
 
 | Dato | Para qué | Dónde va |
 |---|---|---|
-| Teléfono oficial | Enlace directo de llamada desde el móvil. En la ficha de Google aparece un número que empieza por 922, pero en la captura no se lee con seguridad y no se transcribe a ciegas | `_fuente/plantilla.mjs` |
 | Correo oficial | Formularios y pie de página | `_fuente/plantilla.mjs` |
-| Número de WhatsApp | Vía de contacto rápida | `_fuente/plantilla.mjs` |
+| Número de WhatsApp | Vía de contacto rápida. El 922 es fijo, así que hace falta un móvil si quieren botón de WhatsApp | `_fuente/plantilla.mjs` |
 | Razón social, CIF y datos registrales | Aviso legal | `_fuente/paginas/aviso-legal.html` |
 | Cursos abiertos reales, con fechas, horarios y requisitos | Todo el catálogo | `_fuente/cursos.mjs` |
 | Logotipo en vectorial o PNG grande | Cabecera y favicon | `assets/img/` |

@@ -67,7 +67,7 @@ export const CENTRO = {
   lon:       -16.2553749,
   mapaGoogle: 'https://www.google.com/maps/dir//somosviernes,+C.+Celia+Cruz,+6,+Loc+3+y+4,+38003+Santa+Cruz+de+Tenerife/@28.4558029,-16.2553749,17z',
   mapaOsm:    'https://www.openstreetmap.org/?mlat=28.4558029&mlon=-16.2553749#map=18/28.4558029/-16.2553749',
-  telefono:  null,           // ← PENDIENTE: teléfono oficial del centro
+  telefono:  '922 88 84 85',
   whatsapp:  null,           // ← PENDIENTE: número de WhatsApp, formato 34XXXXXXXXX
   correo:    null,           // ← PENDIENTE: correo oficial del centro
   horario:   'De lunes a viernes, de 9:00 a 14:00 y de 16:00 a 20:00',
@@ -83,9 +83,12 @@ export const CENTRO = {
 /* Dato pendiente: se ve, pero se ve que falta. Nunca se inventa. */
 export const pdte = (que) => `<span class="pdte" title="Dato pendiente de facilitar por el centro">${que} pendiente</span>`;
 
-export const tel = () => CENTRO.telefono
-  ? `<a href="tel:${CENTRO.telefono.replace(/\s/g, '')}">${CENTRO.telefono}</a>`
-  : pdte('Teléfono');
+export const tel = () => {
+  if (!CENTRO.telefono) return pdte('Teléfono');
+  const numero = CENTRO.telefono.replace(/\s/g, '');
+  const internacional = numero.startsWith('+') ? numero : '+34' + numero;
+  return `<a href="tel:${internacional}">${CENTRO.telefono}</a>`;
+};
 
 export const mail = () => CENTRO.correo
   ? `<a href="mailto:${CENTRO.correo}">${CENTRO.correo}</a>`
