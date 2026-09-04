@@ -215,11 +215,20 @@ export const pie = () => `
   </div>
 </footer>`;
 
-/* ── Aviso de maqueta ─────────────────────────────────────────────────── */
+/* ── Aviso de maqueta ───────────────────────────────────────────────────
+   Lleva la fecha y la hora de generación. Sirve para saber de un vistazo
+   qué versión se está mirando: al trabajar con varias copias descargadas
+   es fácil abrir por error una carpeta antigua y darla por buena. */
+const SELLO = new Date().toLocaleString('es-ES', {
+  day: '2-digit', month: '2-digit', year: 'numeric',
+  hour: '2-digit', minute: '2-digit', timeZone: 'Atlantic/Canary'
+});
+
 export const avisoMaqueta = () => `
 <div class="maqueta" id="aviso-maqueta">
   <div class="wrap maqueta__in">
-    <p><b>Maqueta de presentación.</b> El diseño y el funcionamiento son reales; los cursos, fechas y datos de contacto son de ejemplo y están pendientes de confirmar con el centro.</p>
+    <p><b>Maqueta de presentación.</b> El diseño y el funcionamiento son reales; los cursos y las fechas son de ejemplo y están pendientes de confirmar con el centro.</p>
+    <span class="maqueta__sello" title="Fecha de generación de esta versión">v. ${SELLO}</span>
     <button type="button" id="cerrar-maqueta">Entendido</button>
   </div>
 </div>`;

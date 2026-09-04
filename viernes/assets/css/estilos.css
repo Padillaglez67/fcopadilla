@@ -767,3 +767,11 @@ a.situacion__mapa:focus-visible .situacion__lupa{ opacity:1; transform:translate
 .direccion .mapa-enlace{ display:block; padding-right:0; }
 .direccion .mapa-enlace__ico{ display:none; }
 .direccion .coords{ display:block; margin-top:.35rem; }
+
+/* Sello de versión en el aviso de maqueta: dice qué copia se está viendo. */
+.maqueta__sello{
+  flex:none; font-family:var(--f-cod); font-size:.72rem; letter-spacing:.02em;
+  color:#8FA3B2; border:1px solid rgba(255,255,255,.16); border-radius:var(--r-pill);
+  padding:.12rem .6rem; white-space:nowrap;
+}
+@media (max-width: 720px){ .maqueta__sello{ display:none; } }
