@@ -7,6 +7,21 @@ decidir nada. **No hace falta internet, ni servidor, ni instalar nada.**
 
 ## Cómo verla
 
+### Lo más rápido: un solo archivo
+
+`viernes-web-completa.html` contiene **la web entera** —las 24 páginas, los
+estilos, las fotos y las tipografías— en un único archivo de 0,7 MB. Doble
+clic y se navega igual que el sitio real. Sirve para enseñarla por correo o
+por WhatsApp sin explicar nada.
+
+Es una pieza de previsualización, no la web que se publica: en el sitio de
+verdad cada curso tiene su propia dirección, que es lo que necesita Google.
+Se regenera con:
+
+```
+node _fuente/archivo-unico.mjs
+```
+
 ### Desde un pendrive o desde el ordenador
 
 1. Copia **toda la carpeta `viernes`** al pendrive. Completa: si falta la

@@ -41,30 +41,30 @@ META-->
     <div class="doble" style="align-items:start">
       <div>
         <h2 style="margin-bottom:1.2rem">Escríbenos</h2>
-        <form class="form" id="form-solicitud" novalidate>
+        <form class="form" data-solicitud novalidate>
           <input type="hidden" name="access_key" value="PEGAR-CLAVE-WEB3FORMS-DEL-CENTRO">
           <input type="hidden" name="subject" value="Consulta desde la web de viernes.">
           <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
 
           <div class="campo campo--req">
-            <label for="f-nombre">Nombre</label>
-            <input id="f-nombre" name="nombre" type="text" required autocomplete="name">
+            <label for="c-nombre">Nombre</label>
+            <input id="c-nombre" name="nombre" type="text" required autocomplete="name">
           </div>
 
           <div class="form__fila">
             <div class="campo campo--req">
-              <label for="f-email">Correo electrónico</label>
-              <input id="f-email" name="email" type="email" required autocomplete="email">
+              <label for="c-email">Correo electrónico</label>
+              <input id="c-email" name="email" type="email" required autocomplete="email">
             </div>
             <div class="campo">
-              <label for="f-tel">Teléfono <span style="font-weight:400;color:var(--tinta-3)">(opcional)</span></label>
-              <input id="f-tel" name="telefono" type="tel" autocomplete="tel">
+              <label for="c-tel">Teléfono <span style="font-weight:400;color:var(--tinta-3)">(opcional)</span></label>
+              <input id="c-tel" name="telefono" type="tel" autocomplete="tel">
             </div>
           </div>
 
           <div class="campo campo--req">
-            <label for="f-curso">Motivo de la consulta</label>
-            <select id="f-curso" name="curso" required>
+            <label for="c-motivo">Motivo de la consulta</label>
+            <select id="c-motivo" name="curso" required>
               <option value="">Elige una opción…</option>
               <option>Información sobre un curso</option>
               <option>Requisitos de acceso</option>
@@ -78,8 +78,8 @@ META-->
           </div>
 
           <div class="campo campo--req">
-            <label for="f-mensaje">Cuéntanos</label>
-            <textarea id="f-mensaje" name="mensaje" required></textarea>
+            <label for="c-mensaje">Cuéntanos</label>
+            <textarea id="c-mensaje" name="mensaje" required></textarea>
           </div>
 
           <label class="consent">
@@ -87,7 +87,7 @@ META-->
             <span>He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</span>
           </label>
 
-          <p class="aviso-form" id="form-msg" role="status" aria-live="polite" hidden></p>
+          <p class="aviso-form" data-msg role="status" aria-live="polite" hidden></p>
           <button class="btn btn--lg" type="submit">Enviar mensaje</button>
         </form>
       </div>

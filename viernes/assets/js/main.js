@@ -12,6 +12,15 @@
   var $  = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
+  /* Evita montar dos veces lo mismo sobre el mismo elemento. */
+  var yaMontado = function (el) {
+    if (!el || el.dataset.montado === '1') return true;
+    el.dataset.montado = '1';
+    return false;
+  };
+
+  function iniciarGlobal () {
+
   /* ── Aviso de maqueta ───────────────────────────────────────────────
      Se recuerda la decisión durante la sesión para no molestar al
      navegar entre páginas. */
@@ -74,9 +83,13 @@
   /* ── Año en curso en el pie ────────────────────────────────────────── */
   $$('[data-anio]').forEach(function (el) { el.textContent = String(new Date().getFullYear()); });
 
+  }
+
+  function iniciarPagina () {
+
   /* ── Buscador de la portada: lleva al catálogo con el texto puesto ── */
   var formBuscar = $('#form-buscar');
-  if (formBuscar) {
+  if (formBuscar && !yaMontado(formBuscar)) {
     formBuscar.addEventListener('submit', function (e) {
       e.preventDefault();
       var q = $('#q-portada').value.trim();
@@ -91,7 +104,7 @@
      los filtros son una mejora, no un requisito.
      ═════════════════════════════════════════════════════════════════ */
   var catalogo = $('#catalogo');
-  if (catalogo) {
+  if (catalogo && !yaMontado(catalogo)) {
     var tarjetas = $$('.curso', catalogo);
     var fTexto  = $('#f-texto');
     var fEstado = $('#f-estado');
@@ -161,7 +174,7 @@
      explicando siempre el porqué. Nunca dice solo «no».
      ═════════════════════════════════════════════════════════════════ */
   var asis = $('#asistente');
-  if (asis && window.VIERNES_CURSOS) {
+  if (asis && window.VIERNES_CURSOS && !yaMontado(asis)) {
     var preguntas = [
       { id: 'situacion', t: '¿Cuál es tu situación laboral ahora mismo?',
         o: [['desempleada','Estoy en desempleo'],['ocupada','Estoy trabajando'],['estudiante','Estudio o busco mi primer empleo'],['autonoma','Soy autónoma o autónomo']] },
@@ -270,9 +283,9 @@
      administración se recogen después, ya con la plaza preseleccionada
      y explicando para qué sirve cada uno.
      ═════════════════════════════════════════════════════════════════ */
-  var form = $('#form-solicitud');
-  if (form) {
-    var msg = $('#form-msg');
+  $$('[data-solicitud]').forEach(function (form) {
+    if (yaMontado(form)) return;
+    var msg = $('[data-msg]', form);
     var decir = function (t, clase) {
       if (!msg) return;
       msg.textContent = t;
@@ -282,7 +295,7 @@
 
     /* El curso llega preseleccionado desde la ficha correspondiente. */
     var elegido = new URLSearchParams(window.location.search).get('curso');
-    var selCurso = $('#f-curso');
+    var selCurso = $('select[name="curso"]', form);
     if (elegido && selCurso) {
       var hay = $$('option', selCurso).some(function (o) { return o.value === elegido; });
       if (hay) selCurso.value = elegido;
@@ -332,5 +345,13 @@
           boton.textContent = textoOriginal;
         });
     });
+  });
+
   }
+
+  /* El sitio de varias páginas monta todo al cargar. El archivo único de
+     previsualización vuelve a llamar a iniciarPagina en cada cambio. */
+  window.VIERNES_INICIAR = iniciarPagina;
+  iniciarGlobal();
+  iniciarPagina();
 })();

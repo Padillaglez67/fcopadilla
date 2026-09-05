@@ -11,7 +11,7 @@ sola en su sitio, con su pie de foto y su texto alternativo:
    zona-infantil.jpg ...... pared de pizarra
    equipo.jpg ............. el equipo docente
    formacion-empresa.jpg .. una sesion de formacion en empresa
-   mapa.png ............... plano de situacion
+   mapa.jpg ............... plano de situacion
 
 Despues hay que regenerar el sitio:   node _fuente/generar.mjs
 

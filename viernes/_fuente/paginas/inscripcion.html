@@ -22,7 +22,7 @@ META-->
   <div class="wrap doble" style="align-items:start">
 
     <div>
-      <form class="form" id="form-solicitud" novalidate>
+      <form class="form" data-solicitud novalidate>
         <!-- Web3Forms · la clave del centro se pega aquí. Ver CONFIGURACION.md -->
         <input type="hidden" name="access_key" value="PEGAR-CLAVE-WEB3FORMS-DEL-CENTRO">
         <input type="hidden" name="subject" value="Nueva solicitud de plaza desde la web">
@@ -78,7 +78,7 @@ META-->
           sobre este curso.</span>
         </label>
 
-        <p class="aviso-form" id="form-msg" role="status" aria-live="polite" hidden></p>
+        <p class="aviso-form" data-msg role="status" aria-live="polite" hidden></p>
 
         <button class="btn btn--lg" type="submit">Enviar solicitud</button>
         <p style="font-size:var(--t-xs);color:var(--tinta-3);margin:0">
