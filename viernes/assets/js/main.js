@@ -196,7 +196,7 @@
 
     var pinta = function () {
       var p = preguntas[paso];
-      barra.style.width = ((paso + 1) / preguntas.length * 100) + '%';
+      barra.style.transform = 'scaleX(' + ((paso + 1) / preguntas.length) + ')';
       var html = '<p class="paso__n">PREGUNTA ' + (paso + 1) + ' DE ' + preguntas.length + '</p>' +
                  '<h2 id="titulo-paso">' + p.t + '</h2><ul class="opciones">';
       p.o.forEach(function (op) {
@@ -228,7 +228,7 @@
     var escala = { sin: 0, eso: 1, bach: 2, sup: 3 };
 
     var resultado = function () {
-      barra.style.width = '100%';
+      barra.style.transform = 'scaleX(1)';
       var validos = [], casi = [];
 
       window.VIERNES_CURSOS.forEach(function (c) {
