@@ -116,6 +116,8 @@ Con `false` desaparecen a la vez el aviso superior de maqueta y el
 
 ## Archivos de trabajo
 
+- **`CLAUDE.md`** — las reglas del proyecto. Claude Code lo lee solo al abrir el repositorio.
+- **`PRIMER-MENSAJE.md`** — cómo montar el repositorio del centro y el mensaje inicial para su Claude.
 - **`CONFIGURACION.md`** — dónde va cada clave: formulario, analítica, dominio.
 - **`DATOS-PENDIENTES.md`** — qué hay que pedirle al centro, ordenado por urgencia.
 - **`_fuente/`** — la fuente del sitio. No hace falta para verlo, pero sí para mantenerlo.
