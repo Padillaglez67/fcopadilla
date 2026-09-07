@@ -461,6 +461,15 @@
   document.addEventListener('visibilitychange', function () {
     if (document.hidden) para(); else arranca();
   });
+
+  /* Tampoco se gasta mientras el fondo no se ve. Al leer el pie de página
+     el lienzo queda fuera de la pantalla y seguía pintando sesenta veces
+     por segundo: en un portátil sin enchufe, eso se nota. */
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entradas) {
+      if (entradas[0].isIntersecting) arranca(); else para();
+    }, { threshold: 0 }).observe(lienzo);
+  }
 })();
 
 /* ── Brillo de las tarjetas siguiendo al cursor ───────────────────────── */
@@ -469,12 +478,26 @@
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (!window.matchMedia('(hover: hover)').matches) return;
 
+  /* El puntero dispara cientos de eventos por segundo. Escribir la
+     variable de estilo en cada uno obliga al navegador a recalcular estilos
+     y a repintar el degradado otras tantas veces, muy por encima de los
+     fotogramas que la pantalla puede mostrar. Se anota la última posición y
+     se escribe una sola vez por fotograma. */
+  var ultimo = null, pendiente = false;
+
+  var pinta = function () {
+    pendiente = false;
+    if (!ultimo) return;
+    var t = ultimo.el, c = t.getBoundingClientRect();
+    t.style.setProperty('--mx', ((ultimo.x - c.left) / c.width * 100).toFixed(1) + '%');
+    t.style.setProperty('--my', ((ultimo.y - c.top) / c.height * 100).toFixed(1) + '%');
+  };
+
   document.addEventListener('pointermove', function (e) {
     var t = e.target.closest ? e.target.closest('.card, .acr, .qcard') : null;
     if (!t) return;
-    var c = t.getBoundingClientRect();
-    t.style.setProperty('--mx', ((e.clientX - c.left) / c.width * 100).toFixed(1) + '%');
-    t.style.setProperty('--my', ((e.clientY - c.top) / c.height * 100).toFixed(1) + '%');
+    ultimo = { el: t, x: e.clientX, y: e.clientY };
+    if (!pendiente) { pendiente = true; requestAnimationFrame(pinta); }
   }, { passive: true });
 })();
 

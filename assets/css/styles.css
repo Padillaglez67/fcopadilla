@@ -52,6 +52,13 @@
   --r:    12px;  /* tarjetas y botones */
   --r-sm: 4px;   /* etiquetas y códigos */
 
+  /* — Movimiento —
+     Las curvas incorporadas del navegador arrancan despacio justo en el
+     instante que la persona está mirando. Estas salen rápido y frenan al
+     final: la misma duración se percibe más ágil. */
+  --ease-out:    cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+
   /* Posición del cursor sobre una tarjeta; la actualiza main.js. */
   --mx: 50%;
   --my: 0%;
@@ -146,9 +153,9 @@ a{ color:inherit; }
   font-family:var(--f-body); font-size:var(--t-sm); font-weight:700;
   letter-spacing:.02em; text-decoration:none;
   border:1px solid transparent; border-radius:var(--r);
-  cursor:pointer; transition:transform .18s ease, box-shadow .18s ease;
+  cursor:pointer; transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out);
 }
-.btn:hover{ transform:translateY(-2px); box-shadow:0 10px 30px -10px rgba(34,211,238,.6); }
+.btn:hover{ box-shadow:0 10px 30px -10px rgba(34,211,238,.6); }
 .btn--ghost{ background:transparent; color:var(--ink); border-color:var(--line-2); }
 .btn--ghost:hover{ border-color:var(--accent); color:var(--accent); box-shadow:none; }
 .btn--plain{
@@ -167,7 +174,7 @@ a{ color:inherit; }
   background:color-mix(in srgb, var(--ground) 86%, transparent);
   backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line);
-  transition:border-color .25s ease;
+  transition:border-color .25s var(--ease-out);
 }
 .nav--scroll{ border-bottom-color:var(--line-2); }
 .nav__in{ display:flex; align-items:center; gap:1.4rem; min-height:70px; }
@@ -188,14 +195,14 @@ a{ color:inherit; }
 .nav__links{ display:flex; gap:1.5rem; }
 .nav__links a{
   font-size:var(--t-sm); color:var(--ink-2); text-decoration:none;
-  padding-block:.35rem; border-bottom:1px solid transparent; transition:color .18s, border-color .18s;
+  padding-block:.35rem; border-bottom:1px solid transparent; transition:color .18s var(--ease-out), border-color .18s var(--ease-out);
 }
 .nav__links a:hover,.nav__links a.is-active{ color:var(--ink); border-bottom-color:var(--accent); }
 
 .burger{ display:none; flex-direction:column; gap:5px; width:40px; height:36px;
   background:none; border:1px solid var(--line-2); border-radius:var(--r); cursor:pointer;
   align-items:center; justify-content:center; }
-.burger span{ display:block; width:17px; height:1.6px; background:var(--ink); transition:transform .25s, opacity .25s; }
+.burger span{ display:block; width:17px; height:1.6px; background:var(--ink); transition:transform .25s var(--ease-out), opacity .25s var(--ease-out); }
 .burger[aria-expanded="true"] span:nth-child(1){ transform:translateY(6.6px) rotate(45deg); }
 .burger[aria-expanded="true"] span:nth-child(2){ opacity:0; }
 .burger[aria-expanded="true"] span:nth-child(3){ transform:translateY(-6.6px) rotate(-45deg); }
@@ -340,10 +347,10 @@ a{ color:inherit; }
 .card{
   position:relative; background:var(--ground); border:1px solid var(--line);
   border-radius:var(--r); padding:1.6rem 1.5rem 1.4rem;
-  transition:border-color .22s ease, transform .22s ease;
+  transition:border-color .22s var(--ease-out), transform .22s var(--ease-out);
 }
 .sec:not(.sec--alt) .card{ background:var(--surface); }
-.card:hover{ border-color:var(--line-2); transform:translateY(-3px); }
+.card:hover{ border-color:var(--line-2); }
 .card--wide{ grid-column:span 2; }
 .card--accent{ border-color:var(--accent); background:linear-gradient(180deg, var(--accent-soft), transparent 55%), var(--ground); }
 .card__code{
@@ -364,7 +371,7 @@ a{ color:inherit; }
 .acred{ display:grid; grid-template-columns:repeat(auto-fit,minmax(292px,1fr)); gap:1rem; }
 .acr{
   background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
-  padding:1.4rem 1.4rem 1.5rem; transition:border-color .22s ease;
+  padding:1.4rem 1.4rem 1.5rem; transition:border-color .22s var(--ease-out);
 }
 .acr:hover{ border-color:var(--line-2); }
 .acr--hi{ border-color:color-mix(in srgb, var(--ok) 45%, var(--line)); }
@@ -466,7 +473,7 @@ a{ color:inherit; }
 .acc summary::-webkit-details-marker{ display:none; }
 .acc summary::after{
   content:"+"; font-family:var(--f-mono); font-size:1.15rem; color:var(--accent);
-  line-height:1; transition:transform .22s ease;
+  line-height:1; transition:transform .22s var(--ease-out);
 }
 .acc[open] summary::after{ transform:rotate(45deg); }
 .acc__n{
@@ -545,7 +552,7 @@ a{ color:inherit; }
 .field input,.field select,.field textarea{
   font-family:var(--f-body); font-size:var(--t-sm); color:var(--ink);
   background:var(--ground); border:1px solid var(--line-2); border-radius:var(--r);
-  padding:.78rem .9rem; width:100%; transition:border-color .18s ease;
+  padding:.78rem .9rem; width:100%; transition:border-color .18s var(--ease-out);
 }
 .field textarea{ resize:vertical; min-height:120px; }
 .field input:hover,.field select:hover,.field textarea:hover{ border-color:var(--ink-3); }
@@ -600,8 +607,8 @@ a{ color:inherit; }
 .legal__back{ display:inline-block; margin-top:2.5rem; font-family:var(--f-mono); font-size:var(--t-xs); letter-spacing:.12em; text-transform:uppercase; color:var(--accent); text-decoration:none; }
 
 /* ── Animación de entrada ───────────────────────────────────────────── */
-.reveal{ opacity:0; transform:translateY(14px); }
-.reveal.is-in{ opacity:1; transform:none; transition:opacity .6s ease, transform .6s cubic-bezier(.2,.7,.3,1); }
+.reveal{ opacity:0; transform:translateY(8px); }
+.reveal.is-in{ opacity:1; transform:none; transition:opacity .28s var(--ease-out), transform .28s var(--ease-out); }
 @media (prefers-reduced-motion: reduce){
   .reveal,.reveal.is-in{ opacity:1; transform:none; transition:none; }
   .btn:hover,.card:hover{ transform:none; }
@@ -656,10 +663,10 @@ a{ color:inherit; }
   font-size:var(--t-sm); font-weight:600; color:var(--ink); text-decoration:none;
   padding:.42rem .85rem; border:1px solid var(--line-2); border-radius:999px;
   background:var(--surface);
-  transition:border-color .18s ease, color .18s ease, transform .18s ease;
+  transition:border-color .18s var(--ease-out), color .18s var(--ease-out), transform .18s var(--ease-out);
 }
 .directo__l svg{ width:15px; height:15px; fill:currentColor; flex:none; }
-.directo__l:hover{ border-color:var(--accent); color:var(--accent); transform:translateY(-1px); }
+.directo__l:hover{ border-color:var(--accent); color:var(--accent); }
 .directo__l--wa{ color:var(--wa); border-color:color-mix(in srgb,var(--wa) 42%,transparent); }
 .directo__l--wa:hover{ border-color:var(--wa); color:var(--wa); }
 
@@ -669,9 +676,9 @@ a{ color:inherit; }
   display:flex; align-items:center; gap:.9rem;
   padding:.9rem 1rem; text-decoration:none;
   background:var(--surface); border:1px solid var(--line-2); border-radius:var(--r);
-  transition:border-color .18s ease, transform .18s ease, background .18s ease;
+  transition:border-color .18s var(--ease-out), transform .18s var(--ease-out), background .18s var(--ease-out);
 }
-.via:hover{ border-color:var(--accent); transform:translateX(3px); }
+.via:hover{ border-color:var(--accent); }
 .via__ico{
   display:grid; place-items:center; width:38px; height:38px; flex:none;
   border-radius:10px; background:var(--accent-soft); color:var(--accent);
@@ -683,8 +690,8 @@ a{ color:inherit; }
   text-transform:uppercase; color:var(--ink-3);
 }
 .via__txt b{ font-size:var(--t-sm); font-weight:600; color:var(--ink); overflow-wrap:anywhere; }
-.via__go{ margin-left:auto; color:var(--ink-3); font-size:1.05rem; transition:color .18s, transform .18s; }
-.via:hover .via__go{ color:var(--accent); transform:translateX(3px); }
+.via__go{ margin-left:auto; color:var(--ink-3); font-size:1.05rem; transition:color .18s var(--ease-out), transform .18s var(--ease-out); }
+.via:hover .via__go{ color:var(--accent); }
 
 .via--wa .via__ico{ background:color-mix(in srgb,var(--wa) 14%,transparent); color:var(--wa); }
 .via--wa:hover{ border-color:var(--wa); }
@@ -695,10 +702,10 @@ a{ color:inherit; }
 .pie__vias a{
   display:grid; place-items:center; width:38px; height:38px;
   border:1px solid var(--line-2); border-radius:10px; color:var(--ink-2);
-  transition:border-color .18s, color .18s, transform .18s;
+  transition:border-color .18s var(--ease-out), color .18s var(--ease-out), transform .18s var(--ease-out);
 }
 .pie__vias svg{ width:17px; height:17px; fill:currentColor; }
-.pie__vias a:hover{ border-color:var(--accent); color:var(--accent); transform:translateY(-2px); }
+.pie__vias a:hover{ border-color:var(--accent); color:var(--accent); }
 
 /* — Botón flotante — */
 .flota{
@@ -708,10 +715,10 @@ a{ color:inherit; }
   background:var(--wa); color:#04150C;
   font-size:var(--t-sm); font-weight:700; border-radius:999px;
   box-shadow:0 10px 30px -8px rgba(37,211,102,.5);
-  transition:transform .2s ease, box-shadow .2s ease;
+  transition:transform .2s var(--ease-out), box-shadow .2s var(--ease-out);
 }
 .flota svg{ width:20px; height:20px; fill:currentColor; }
-.flota:hover{ transform:translateY(-3px); box-shadow:0 16px 38px -10px rgba(37,211,102,.65); }
+.flota:hover{ box-shadow:0 16px 38px -10px rgba(37,211,102,.65); }
 @media (max-width:560px){
   .flota{ padding:.85rem; border-radius:50%; }
   .flota span{ display:none; }
@@ -733,7 +740,7 @@ a{ color:inherit; }
   text-align:center; word-break:break-word;
   box-shadow:0 14px 36px -10px rgba(0,0,0,.6);
   opacity:0; pointer-events:none;
-  transition:opacity .22s ease, transform .22s ease;
+  transition:opacity .22s var(--ease-out), transform .22s var(--ease-out);
 }
 .copiado--visible{ opacity:1; transform:translate(-50%,0); }
 /* En pantallas pequeñas el botón flotante ocupa la esquina inferior:
@@ -742,7 +749,9 @@ a{ color:inherit; }
   .copiado{ bottom:4.8rem; }
 }
 @media (prefers-reduced-motion:reduce){
-  .copiado{ transition:opacity .01ms; transform:translate(-50%,0); }
+  /* Se conserva el fundido —ayuda a ver que el aviso aparece y se va— y
+     se elimina solo el desplazamiento. */
+  .copiado{ transition:opacity .15s var(--ease-out); transform:translate(-50%,0); }
 }
 @media print{ .copiado{ display:none !important; } }
 
@@ -831,13 +840,13 @@ body::after{
   border-radius:11px;
   background:var(--accent-soft); color:var(--accent);
   border:1px solid color-mix(in srgb,var(--accent) 22%,transparent);
-  transition:transform .25s ease, background .25s ease;
+  transition:transform .25s var(--ease-out), background .25s var(--ease-out);
 }
 .card__ico svg{
   width:21px; height:21px; fill:none; stroke:currentColor;
   stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round;
 }
-.card:hover .card__ico{ transform:translateY(-2px) scale(1.04); }
+
 .card__head{ display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; }
 .card--accent .card__ico{ background:rgba(34,211,238,.18); }
 
@@ -861,7 +870,7 @@ body::after{
 .card::after,.acr::after,.qcard::after{
   content:""; position:absolute; inset:0; pointer-events:none;
   background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%), rgba(34,211,238,.09), transparent 62%);
-  opacity:0; transition:opacity .3s ease;
+  opacity:0; transition:opacity .25s var(--ease-out);
 }
 .card:hover::after,.acr:hover::after,.qcard:hover::after{ opacity:1; }
 .acr,.qcard{ position:relative; }
@@ -997,7 +1006,7 @@ body::after{
   flex:none; width:36px; height:36px; font-size:1.6rem; line-height:1;
   background:transparent; color:var(--ink-2);
   border:1px solid var(--line-2); border-radius:9px; cursor:pointer;
-  transition:color .18s, border-color .18s;
+  transition:color .18s var(--ease-out), border-color .18s var(--ease-out);
 }
 .doc__x:hover{ color:var(--accent); border-color:var(--accent); }
 
@@ -1045,3 +1054,34 @@ body::after{
 }
 
 @media print{ .doc{ display:none !important; } }
+
+
+/* ══════════ MOVIMIENTO AL PASAR EL RATÓN ══════════
+   Todo el movimiento que depende del puntero vive aquí dentro. En una
+   pantalla táctil el navegador dispara «hover» al tocar y lo deja pegado
+   hasta que se toca otra cosa: una tarjeta levantada que no vuelve a bajar
+   o un icono desplazado que se queda desplazado. Con esta condición, el
+   móvil recibe los cambios de color y de borde, y se queda sin los
+   desplazamientos. Los cambios de color siguen fuera, donde estaban. */
+@media (hover: hover) and (pointer: fine){
+  .btn:hover{ transform:translateY(-2px); }
+  .card:hover{ transform:translateY(-3px); }
+  .card:hover .card__ico{ transform:translateY(-2px) scale(1.04); }
+  .directo__l:hover{ transform:translateY(-1px); }
+  .via:hover{ transform:translateX(3px); }
+  .via:hover .via__go{ transform:translateX(3px); }
+  .pie__vias a:hover{ transform:translateY(-2px); }
+  .flota:hover{ transform:translateY(-3px); }
+}
+
+/* ══════════ RESPUESTA AL PULSAR ══════════
+   Va después del bloque anterior a propósito: mientras se pulsa, el ratón
+   sigue encima, así que las dos reglas compiten. Gana la última, y lo que
+   debe ganar es el hundimiento. Sin él, ni el dedo ni el ratón reciben
+   confirmación de que el gesto ha llegado. */
+.btn:active,
+.directo__l:active,
+.pie__vias a:active{ transform:scale(.97); transition-duration:.1s; }
+.via:active{ transform:scale(.99); transition-duration:.1s; }
+.flota:active{ transform:scale(.94); transition-duration:.1s; }
+.burger:active{ transform:scale(.94); transition:transform .1s var(--ease-out); }
