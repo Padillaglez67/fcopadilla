@@ -1,6 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FJP">
-  <rect width="64" height="64" rx="8" fill="#FFB000"/>
-  <text x="32" y="42" text-anchor="middle"
-        font-family="Impact, 'Arial Narrow', Haettenschweiler, sans-serif"
-        font-size="30" letter-spacing="-1" fill="#1A1206">FJP</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FJ · Francisco J. Padilla">
+  <!-- Disco propio, no transparente: así se lee igual sobre una barra de
+       pestañas clara que sobre una oscura. -->
+  <circle cx="32" cy="32" r="31" fill="#0D1524"/>
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#22D3EE" stroke-width="4"/>
+  <!-- El monograma va trazado, no compuesto con tipografía: un favicon se
+       renderiza en cualquier sistema y no puede depender de que haya una
+       fuente instalada. -->
+  <g fill="none" stroke="#EDF2FA" stroke-width="6" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M17 45 V20 H28"/>
+    <path d="M17 32 H26"/>
+    <path d="M46 20 V35 a6 6 0 0 1 -12 0"/>
+  </g>
 </svg>
