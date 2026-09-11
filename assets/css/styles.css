@@ -179,13 +179,12 @@ a{ color:inherit; }
 .nav--scroll{ border-bottom-color:var(--line-2); }
 .nav__in{ display:flex; align-items:center; gap:1.4rem; min-height:70px; }
 
-.brand{ display:flex; align-items:center; gap:.7rem; text-decoration:none; margin-right:auto; }
-.brand__mark{
-  display:grid; place-items:center; width:38px; height:38px; flex:none;
-  background:var(--grad); color:var(--accent-ink);
-  font-family:var(--f-mono); font-size:.72rem; font-weight:600; letter-spacing:.04em;
-  border-radius:var(--r);
-}
+.brand{ display:flex; align-items:center; gap:.6rem; text-decoration:none; margin-right:auto; }
+/* Aquí va el emblema solo, sin el rótulo: al lado ya se lee «Francisco J.
+   Padilla · Docente FPE», así que repetirlo sobraría, y el rótulo a este
+   tamaño no se distinguiría. 56 px es el mínimo al que el emblema se lee;
+   por debajo queda una mancha azul. */
+.brand__logo{ width:56px; height:56px; flex:none; }
 .brand__txt{ font-size:var(--t-sm); font-weight:600; line-height:1.25; }
 .brand__txt em{
   display:block; font-family:var(--f-mono); font-style:normal;
