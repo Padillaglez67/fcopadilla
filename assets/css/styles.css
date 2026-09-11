@@ -588,11 +588,12 @@ a{ color:inherit; }
 /* ── Pie ────────────────────────────────────────────────────────────── */
 .pie{ background:var(--ground); border-top:1px solid var(--line); padding-block:2.8rem; }
 .pie__in{ display:grid; gap:1.6rem; }
-.pie__brand{ display:flex; align-items:center; gap:1rem; }
-/* El emblema lleva rótulo, birrete y circuitos: por debajo de unos 56 px deja
-   de leerse y se convierte en una mancha. Por eso va aquí a 64 y en la barra
-   de navegación, que solo da 38, se mantiene el monograma. */
-.pie__logo{ width:64px; height:64px; flex:none; }
+.pie__brand{ display:flex; flex-wrap:wrap; align-items:center; gap:.6rem 1.2rem; }
+/* El logotipo completo, con el rótulo. El rótulo ocupa la décima parte del alto
+   de la imagen, así que por debajo de unos 120 px «Logística · Tecnología» deja
+   de leerse. En la barra de navegación, que solo da 38, se mantiene el
+   monograma: ahí no cabe ni el emblema suelto. */
+.pie__logo{ width:117px; height:120px; flex:none; }
 .pie__brand p{ margin:0; font-size:var(--t-sm); font-weight:600; line-height:1.35; }
 .pie__brand em{ font-style:normal; font-weight:400; color:var(--ink-3); font-size:var(--t-xs); }
 .pie__nav{ display:flex; flex-wrap:wrap; gap:.4rem 1.5rem; }
