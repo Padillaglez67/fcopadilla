@@ -396,6 +396,24 @@ a{ color:inherit; }
 }
 .acr__note b{ color:var(--ok); }
 
+/* Enlace a la ficha en cada tarjeta. Nueve enlaces directos desde la portada
+   en lugar de uno: Google reparte el rastreo siguiendo los enlaces internos, y
+   las fichas colgaban solo del catálogo, a dos saltos de la portada. */
+.acr__ficha{ margin:.9rem 0 0; }
+.acr__ficha a{
+  font-family:var(--f-mono); font-size:var(--t-xs); letter-spacing:.1em;
+  text-transform:uppercase; color:var(--accent); text-decoration:none;
+  border-bottom:1px solid transparent; transition:border-color .18s var(--ease-out);
+}
+.acr__ficha a:hover{ border-bottom-color:var(--accent); }
+
+/* Texto solo para lectores de pantalla: ocho enlaces seguidos que pusieran
+   «Ver la ficha completa» a secas no dirían de qué. */
+.oculto{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+}
+
 /* ── Metodología ────────────────────────────────────────────────────── */
 .flow{
   list-style:none; padding:0; margin:0 0 clamp(2.5rem,6vw,4rem);
