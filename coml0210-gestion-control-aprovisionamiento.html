@@ -25,35 +25,106 @@
 <link rel="preload" href="assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fuentes.css">
 <link rel="stylesheet" href="assets/css/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://frandocencia.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Formación que imparto",
+          "item": "https://frandocencia.com/cursos.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "COML0210 · Gestión y Control del Aprovisionamiento"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://frandocencia.com/coml0210-gestion-control-aprovisionamiento.html",
+      "url": "https://frandocencia.com/coml0210-gestion-control-aprovisionamiento.html",
+      "name": "COML0210 · Gestión y Control del Aprovisionamiento | Docente acreditado en Canarias",
+      "description": "Docente acreditado por el Servicio Canario de Empleo para impartir COML0210 Gestión y Control del Aprovisionamiento. Módulos, resultados de aprendizaje, metodología y experiencia impartiendo. Tenerife y Canarias.",
+      "inLanguage": "es-ES",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Francisco J. Padilla · Docente FPE",
+        "url": "https://frandocencia.com/"
+      },
+      "about": {
+        "@id": "https://frandocencia.com/coml0210-gestion-control-aprovisionamiento.html#credencial"
+      },
+      "author": {
+        "@id": "https://frandocencia.com/#persona"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "@id": "https://frandocencia.com/coml0210-gestion-control-aprovisionamiento.html#credencial",
+      "name": "COML0210 · Gestión y Control del Aprovisionamiento",
+      "identifier": "COML0210",
+      "credentialCategory": "Certificado de profesionalidad",
+      "recognizedBy": {
+        "@type": "GovernmentOrganization",
+        "name": "Servicio Canario de Empleo",
+        "url": "https://www3.gobiernodecanarias.org/empleo/portal/"
+      },
+      "url": "https://frandocencia.com/coml0210-gestion-control-aprovisionamiento.html",
+      "educationalLevel": "Nivel 3",
+      "timeRequired": "PT450H"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://frandocencia.com/#persona",
+      "name": "Francisco Javier Padilla González",
+      "url": "https://frandocencia.com/",
+      "jobTitle": "Docente de Formación Profesional para el Empleo"
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
 
 <header class="nav" id="nav">
   <div class="wrap nav__in">
-    <a class="brand" href="index.html" aria-label="Inicio">
+    <a class="brand" href="/" aria-label="Inicio">
       <img class="brand__logo" src="assets/img/logo-fjp-emblema.webp" alt="" width="56" height="56" fetchpriority="high" decoding="async">
       <span class="brand__txt">Francisco J. Padilla<em>Docente FPE</em></span>
     </a>
     <nav class="nav__links" aria-label="Principal">
       <a href="cursos.html">Cursos</a>
-      <a href="index.html#perfil">Perfil</a>
-      <a href="index.html#areas">Qué imparto</a>
-      <a href="index.html#trayectoria">Trayectoria</a>
+      <a href="/#perfil">Perfil</a>
+      <a href="/#areas">Qué imparto</a>
+      <a href="/#trayectoria">Trayectoria</a>
     </nav>
-    <a class="btn btn--sm" href="index.html#contacto">Contactar</a>
+    <a class="btn btn--sm" href="/#contacto">Contactar</a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="nav__mobile" id="menu-movil" hidden>
-    <a href="index.html">Inicio</a>
+    <a href="/">Inicio</a>
     <a href="cursos.html">Cursos</a>
-    <a href="index.html#perfil">Perfil</a>
-    <a href="index.html#areas">Qué imparto</a>
-    <a href="index.html#acreditaciones">Acreditaciones</a>
-    <a href="index.html#trayectoria">Trayectoria</a>
-    <a href="index.html#contacto">Contactar</a>
+    <a href="/#perfil">Perfil</a>
+    <a href="/#areas">Qué imparto</a>
+    <a href="/#acreditaciones">Acreditaciones</a>
+    <a href="/#trayectoria">Trayectoria</a>
+    <a href="/#contacto">Contactar</a>
   </div>
 </header>
 
@@ -66,7 +137,7 @@
     <h1 class="h2">Gestión y control<br>del aprovisionamiento.</h1>
     <p class="lead">Acreditado por el <span class="kw kw--ok">Servicio Canario de Empleo</span> para impartir <span class="kw kw--ok">los tres módulos técnicos</span>: todo el certificado salvo el módulo de inglés. Es lo que ocurre antes de que la mercancía llegue al muelle: previsión de la demanda, plan de compras, gestión de proveedores y control del coste de aprovisionar.</p>
     <p class="hero__cta">
-      <a class="btn" href="index.html#contacto">Solicitar disponibilidad</a>
+      <a class="btn" href="/#contacto">Solicitar disponibilidad</a>
       <button type="button" class="btn btn--ghost" id="imprimir">Imprimir o guardar en PDF</button>
       <a class="btn btn--plain" href="cursos.html">Ver todas las acreditaciones</a>
     </p>
@@ -281,7 +352,7 @@
     <p class="lead">Incorporación inmediata en Canarias. Puedo aportar la resolución del Servicio
     Canario de Empleo de esta acreditación y las del resto.</p>
     <p class="hero__cta">
-      <a class="btn" href="index.html#contacto">Hablemos</a>
+      <a class="btn" href="/#contacto">Hablemos</a>
       <a class="btn btn--ghost" href="cursos.html">Ver todas las acreditaciones</a>
     </p>
   </div>
@@ -298,10 +369,10 @@
     </div>
     <nav class="pie__nav" aria-label="Pie de página">
       <a href="cursos.html">Cursos</a>
-      <a href="index.html#perfil">Perfil</a>
-      <a href="index.html#areas">Qué imparto</a>
-      <a href="index.html#acreditaciones">Acreditaciones</a>
-      <a href="index.html#contacto">Contacto</a>
+      <a href="/#perfil">Perfil</a>
+      <a href="/#areas">Qué imparto</a>
+      <a href="/#acreditaciones">Acreditaciones</a>
+      <a href="/#contacto">Contacto</a>
       <a href="aviso-legal.html">Aviso legal</a>
       <a href="privacidad.html">Privacidad</a>
     </nav>

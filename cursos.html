@@ -43,35 +43,131 @@
   .fichas a:hover{ color:var(--ink); }
   #ir-a-ficha{ margin:2.4rem 0 0; }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://frandocencia.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Formación que imparto"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://frandocencia.com/cursos.html",
+      "url": "https://frandocencia.com/cursos.html",
+      "name": "Formación que imparto · Ocho acreditaciones del Servicio Canario de Empleo",
+      "description": "Catálogo de la formación que puedo impartir: ocho acreditaciones docentes del Servicio Canario de Empleo en logística, almacén, transporte, carretillas elevadoras y ofimática, más el nombramiento como asesor y evaluador del PEAC.",
+      "inLanguage": "es-ES",
+      "author": {
+        "@id": "https://frandocencia.com/#persona"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": 8,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "COML0110 · Actividades Auxiliares de Almacén",
+            "url": "https://frandocencia.com/coml0110-actividades-auxiliares-almacen.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "COML0309 · Organización y Gestión de Almacenes",
+            "url": "https://frandocencia.com/coml0309-organizacion-gestion-almacenes.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "COML0210 · Gestión y Control del Aprovisionamiento",
+            "url": "https://frandocencia.com/coml0210-gestion-control-aprovisionamiento.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "COML0209 · Organización del Transporte y la Distribución",
+            "url": "https://frandocencia.com/coml0209-organizacion-transporte-distribucion.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "COML0109 · Tráfico de Mercancías por Carretera",
+            "url": "https://frandocencia.com/coml0109-trafico-mercancias-carretera.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "MF0233_2 · Ofimática · módulo transversal del certificado ADGG0208",
+            "url": "https://frandocencia.com/adgg0208-mf0233-ofimatica.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "COML20 · Actividades Básicas de Logística de Almacén",
+            "url": "https://frandocencia.com/coml20-actividades-basicas-logistica-almacen.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "COML0008 · Conducción de Carretillas Elevadoras",
+            "url": "https://frandocencia.com/coml0008-carretillas-elevadoras.html"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://frandocencia.com/#persona",
+      "name": "Francisco Javier Padilla González",
+      "url": "https://frandocencia.com/",
+      "jobTitle": "Docente de Formación Profesional para el Empleo"
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
 
 <header class="nav" id="nav">
   <div class="wrap nav__in">
-    <a class="brand" href="index.html" aria-label="Inicio">
+    <a class="brand" href="/" aria-label="Inicio">
       <img class="brand__logo" src="assets/img/logo-fjp-emblema.webp" alt="" width="56" height="56" fetchpriority="high" decoding="async">
       <span class="brand__txt">Francisco J. Padilla<em>Docente FPE</em></span>
     </a>
     <nav class="nav__links" aria-label="Principal">
       <a href="cursos.html">Cursos</a>
-      <a href="index.html#perfil">Perfil</a>
-      <a href="index.html#areas">Qué imparto</a>
-      <a href="index.html#trayectoria">Trayectoria</a>
+      <a href="/#perfil">Perfil</a>
+      <a href="/#areas">Qué imparto</a>
+      <a href="/#trayectoria">Trayectoria</a>
     </nav>
-    <a class="btn btn--sm" href="index.html#contacto">Contactar</a>
+    <a class="btn btn--sm" href="/#contacto">Contactar</a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="nav__mobile" id="menu-movil" hidden>
-    <a href="index.html">Inicio</a>
+    <a href="/">Inicio</a>
     <a href="cursos.html">Cursos</a>
-    <a href="index.html#perfil">Perfil</a>
-    <a href="index.html#areas">Qué imparto</a>
-    <a href="index.html#acreditaciones">Acreditaciones</a>
-    <a href="index.html#trayectoria">Trayectoria</a>
-    <a href="index.html#contacto">Contactar</a>
+    <a href="/#perfil">Perfil</a>
+    <a href="/#areas">Qué imparto</a>
+    <a href="/#acreditaciones">Acreditaciones</a>
+    <a href="/#trayectoria">Trayectoria</a>
+    <a href="/#contacto">Contactar</a>
   </div>
 </header>
 
@@ -87,7 +183,7 @@
     con el código oficial y los módulos que cada una habilita. Todas son verificables ante el SCE, y
     puedo aportar la resolución de cualquiera de ellas.</p>
     <p class="hero__cta">
-      <a class="btn" href="index.html#contacto">Solicitar disponibilidad</a>
+      <a class="btn" href="/#contacto">Solicitar disponibilidad</a>
       <a class="btn btn--ghost" href="#acreditaciones">Ver las ocho acreditaciones</a>
     </p>
 
@@ -264,8 +360,8 @@
     </div>
 
     <p class="hero__cta">
-      <a class="btn" href="index.html#contacto">Hablemos</a>
-      <a class="btn btn--plain" href="index.html#trayectoria">Ver la trayectoria completa</a>
+      <a class="btn" href="/#contacto">Hablemos</a>
+      <a class="btn btn--plain" href="/#trayectoria">Ver la trayectoria completa</a>
     </p>
   </div>
 </section>
@@ -281,10 +377,10 @@
     </div>
     <nav class="pie__nav" aria-label="Pie de página">
       <a href="cursos.html">Cursos</a>
-      <a href="index.html#perfil">Perfil</a>
-      <a href="index.html#areas">Qué imparto</a>
-      <a href="index.html#acreditaciones">Acreditaciones</a>
-      <a href="index.html#contacto">Contacto</a>
+      <a href="/#perfil">Perfil</a>
+      <a href="/#areas">Qué imparto</a>
+      <a href="/#acreditaciones">Acreditaciones</a>
+      <a href="/#contacto">Contacto</a>
       <a href="aviso-legal.html">Aviso legal</a>
       <a href="privacidad.html">Privacidad</a>
     </nav>
