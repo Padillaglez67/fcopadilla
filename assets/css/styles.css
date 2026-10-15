@@ -719,6 +719,10 @@ a{ color:inherit; }
 .via--wa:hover{ border-color:var(--wa); }
 .via--wa:hover .via__go{ color:var(--wa); }
 
+/* En las fichas el bloque va a todo el ancho de la sección: reparte las
+   tarjetas en columnas y las apila solas cuando no caben. */
+.vias--fila{ grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); margin-bottom:1.6rem; }
+
 /* — Iconos del pie — */
 .pie__vias{ display:flex; flex-wrap:wrap; gap:.55rem; }
 .pie__vias a{
