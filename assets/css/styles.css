@@ -478,6 +478,27 @@ a{ color:inherit; }
 .tl__items b{ color:var(--ink); font-weight:600; }
 @media (max-width:760px){ .tl__yr{ grid-template-columns:1fr; gap:.9rem; } }
 
+/* ── Índice de módulos formativos ───────────────────────────────────── */
+/* Los centros preguntan por código de módulo, no por nombre de certificado,
+   así que el código va primero y en monoespaciada, para que se escanee. */
+.mods{ display:grid; gap:0; margin:1.7rem 0 2.2rem; border-top:1px solid var(--line); }
+.mods__fila{
+  display:grid; grid-template-columns:150px minmax(0,1fr); gap:clamp(.9rem,3vw,2rem);
+  padding-block:1.05rem; border-bottom:1px solid var(--line); align-items:baseline;
+}
+.mods__code{
+  margin:0; font-family:var(--f-mono); font-size:.82rem; font-weight:600;
+  color:var(--ink); letter-spacing:.03em;
+}
+.mods__nom{ margin:0; font-size:var(--t-sm); color:var(--ink-2); line-height:1.5; }
+.mods__cert{
+  margin:.35rem 0 0; font-family:var(--f-mono); font-size:var(--t-xs);
+  letter-spacing:.08em; text-transform:uppercase;
+}
+.mods__cert a{ color:var(--accent); text-decoration:none; border-bottom:1px solid transparent; }
+.mods__cert a:hover{ border-bottom-color:var(--accent); }
+@media (max-width:620px){ .mods__fila{ grid-template-columns:1fr; gap:.3rem; } }
+
 /* ── Formación (acordeones) ─────────────────────────────────────────── */
 .form-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:1rem; }
 .acc{ background:var(--surface); border:1px solid var(--line); border-radius:var(--r); }
