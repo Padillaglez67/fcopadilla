@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+# El CV en PDF se descarga desde la portada, pero no queremos que sea
+# un resultado de búsqueda: no tiene menú ni forma de contactar.
+Disallow: /assets/docs/
 
 Sitemap: https://frandocencia.com/sitemap.xml
