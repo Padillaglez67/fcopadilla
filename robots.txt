@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-# El CV en PDF ya no se publica (se envía a petición). Se mantiene el
-# bloqueo como red de seguridad por si se vuelve a subir algún documento.
-Disallow: /assets/docs/
 
 Sitemap: https://frandocencia.com/sitemap.xml
