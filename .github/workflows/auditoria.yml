@@ -1,0 +1,47 @@
+name: Auditoría de la web
+
+# Corre la misma revisión que la skill auditoria-web, pero sola, en cada push.
+# Hasta ahora solo se pasaba cuando alguien se acordaba.
+#
+# Gratis e ilimitado: este repositorio es público y GitHub no cobra minutos de
+# Actions a los repositorios públicos.
+#
+# El script sale con código 1 si encuentra fallos, así que el trabajo se pone
+# en rojo solo. En master eso avisa de que algo se publicó roto; en la rama de
+# trabajo avisa ANTES de mezclar, que es para lo que sirve de verdad.
+
+on:
+  push:
+    branches:
+      - master
+      - 'claude/**'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:   # para lanzarla a mano desde la pestaña Actions
+
+permissions:
+  contents: read
+
+jobs:
+  auditoria:
+    name: Revisar el sitio entero
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Traer el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Instalar Playwright y Chromium
+        run: |
+          python -m pip install --quiet --upgrade pip
+          python -m pip install --quiet playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Pasar la auditoría
+        run: python .claude/skills/auditoria-web/scripts/auditoria.py

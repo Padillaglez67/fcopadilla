@@ -31,6 +31,11 @@ Dos detalles que ahorran tiempo perdido:
 Opciones: `--dir <ruta>` para revisar otra copia, `--json` para dejar además un
 `informe.json`. Ejecuta `--help` antes de cambiar nada.
 
+**También corre sola.** `.github/workflows/auditoria.yml` la ejecuta en cada
+push a `master` y a cualquier rama `claude/**`, y en cada pull request. Si sale
+en rojo en la pestaña Actions, el sitio tiene un fallo. Eso no sustituye
+pasarla aquí antes de mezclar: avisa después, y la idea es enterarse antes.
+
 **No leas el fuente del script para entender qué comprueba.** Está pensado para
 usarse como caja negra; su `--help` y esta página bastan. Léelo solo si hay que
 modificar una comprobación.
