@@ -42,15 +42,21 @@ NOINDEX_ESPERADO = {"aviso-legal.html", "privacidad.html"}
 DOMINIO = "https://frandocencia.com/"
 
 
-def chrome() -> str:
-    """El contenedor cambia de version de Chromium cada pocas semanas."""
+def chrome():
+    """Ruta de Chromium, o None para que Playwright use la suya.
+
+    En el contenedor de trabajo Chromium vive en /opt/pw-browsers y cambia de
+    version cada pocas semanas, de ahi el glob. En GitHub Actions lo instala
+    `playwright install` en su sitio de siempre y no hay que decirle nada:
+    devolver None es justo lo que espera `launch()`.
+    """
     for patron in (
         "/opt/pw-browsers/chromium-*/chrome-linux*/chrome",
         "/opt/pw-browsers/chromium_headless_shell-*/*/chrome-headless-shell",
     ):
         if c := sorted(glob.glob(patron)):
             return c[-1]
-    raise SystemExit("no encuentro Chromium en /opt/pw-browsers")
+    return None
 
 
 @contextlib.contextmanager
