@@ -1,0 +1,7 @@
+# GitHub Pages pasa el sitio por Jekyll aunque no se use. Sin esta exclusion,
+# los ficheros de trabajo se servirian en el dominio: CLAUDE.md quedaria
+# publicado en https://frandocencia.com/CLAUDE.md y Google podria indexarlo
+# bajo su nombre. Son notas internas, no contenido del sitio.
+exclude:
+  - CLAUDE.md
+  - .claude/
