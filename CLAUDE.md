@@ -107,6 +107,16 @@ enviar por iniciativa propia, no.
 Lo que ya está programado en Typefully (LinkedIn) y Buffer (Instagram) lo
 aprobó él publicación por publicación.
 
+**Son dos redes, siempre las dos.** Cualquier comprobación, recuento o informe
+de redes sociales cubre **LinkedIn (Typefully) e Instagram (Buffer)**, no una
+sola. Mirar únicamente la que acaba de publicar deja la mitad sin revisar, y la
+mitad sin revisar es donde se esconde el fallo.
+
+En Typefully hay que distinguir `scheduled` de `planned`: una publicación
+`planned` tiene fecha pero **no se publica sola** hasta que se confirma. Pasada
+su fecha no da error, simplemente no ha salido. Hay que comprobarlo a propósito
+porque no avisa.
+
 ## 8 · Entorno
 
 - **Playwright y Chromium están en `python3.13`**, no en `python3` (3.11). Con
